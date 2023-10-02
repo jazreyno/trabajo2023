@@ -3,3 +3,5 @@ La tabla de videojuegos consta de una clave primaria llamada  "id_videojuegos", 
 Además, establecemos una relación a través de la clave foránea id_empresa que se conecta con la tabla de compañías. 
 Esta última tabla, por su parte, emplea "id_empresa" como clave primaria y almacena datos como el nombre de la empresa (utilizando el tipo de dato varchar), 
 su cotización (representada como un número entero) y la fecha de creación de la compañía.
+tema: venta de videojuegos.
+integrantes:olivia todesco y jazmin reynoso.
