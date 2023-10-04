@@ -1,4 +1,10 @@
 <?php
 
-    require_once './app/modelo/MoedeloUsuarios.php';
+    require_once './app/modelo/ModeloUsuarios.php';
     require_once './app/vista/VistaUsuarios.php';
+
+    class ControladorUsuarios{
+        function mostrarUsuarios(){
+            
+        }
+    }
