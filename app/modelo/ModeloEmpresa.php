@@ -9,8 +9,14 @@
         }
         function verEmpresa(){
             
+        $query =$this->db->prepare("SELECT * FROM companias");
+        $query->execute();
+        $empresas= $query->fetchAll(PDO::FETCH_OBJ);
+     
+          return $empresas;
+        }
         }
 
 
-    }
+    
     ?>

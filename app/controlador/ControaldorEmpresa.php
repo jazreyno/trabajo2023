@@ -5,21 +5,21 @@
 
 class ControladorEmpresa{
 
-    private $vista;
-    private $modelo;
+    private $vistaempresa;
+    private $modeloempresa;
 
     function __construct()
     {
-        $this->modelo=new ModeloEmpresa();
-        $this->vista=new VistaEmpresa();
+        $this->modeloempresa=new ModeloEmpresa();
+        $this->vistaempresa=new VistaEmpresa();
     }
 
 
 
     function verEmpresa(){
 
-      $empresas = $this->modelo->verEmpresa();
-      $this->vista->Empresas($empresas);
+      $empresas = $this->modeloempresa->verEmpresa();
+      $this->vistaempresa->Empresas($empresas);
 
     }
 

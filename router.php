@@ -4,10 +4,7 @@ require_once './app/controlador/ControaldorJuegos.php';
 require_once './app/controlador/ControaldorEmpresa.php';
 require_once './app/controlador/ControladorUsuarios.php';
 
-function __construct(){
-    $db = new PDO('mysql:host=localhost;dbname=trabajo_especial;charset=utf8'); //revisar nombre dbname 
 
-}
 
 
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
@@ -29,7 +26,9 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
         case 'videojuegos':
             $controladorViedeojuegos -> VerVideojuegos();
             break;
-            
+        case 'usuario':
+            $controladorUsuarios->verusuarios();
+            break;
     }
     
 

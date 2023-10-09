@@ -8,6 +8,11 @@
         
         }
         function verUsuarios(){
+            $query =$this->db->prepare("SELECT * FROM usuario");
+            $query->execute();
+            $usuario= $query->fetchAll(PDO::FETCH_OBJ);
+         
+              return $usuario;
             
         }
 
