@@ -24,5 +24,19 @@ class AuthController {
             $this->vista->mostrarLogin('Faltan completar campos');
             return;
         }
+
+        $usuario = $this->modelo->obtenerPorEmail($email);
+        if ($usuario && password_verify($password, $usuario->password)) {
+            
+            AuthHelper::login($usuario);
+            header('Location: ' . BASE_URL);
+        } else {
+            $this->vista->mostrarLogin('Usuario invalido');
+        }
     }
-}
+
+        public function logout() {
+            AuthHelper::logout();
+            header('Location: ' . BASE_URL);
+        }
+    }

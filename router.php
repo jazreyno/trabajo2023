@@ -23,41 +23,38 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador = new ControladorVideojuegos();
             $controlador->VerVideojuegos();
             break;
+        case 'videojuego':
+            $controlador->VerVideojuegoId($params[1]);
+            break;
         case 'agregar':
             $controlador = new ControladorVideojuegos();
             $controlador->agregarJuego();
-                break; //Agregamos videojuegos?
+                break; 
         case 'eliminar':
             $controlador = new ControladorVideojuegos();
             $controlador->eliminarJuego($id);
             break;
         case 'empresas':
-            $c="DSAD";
             $controlador = new ControladorEmpresa();
             $controlador->verEmpresa();                
             break;
         case 'usuario':
             $controlador = new ControladorUsurios();
             $controlador->verUsuarios();
-            break;
-    //las deqweqwe    
+            break;   
         case 'login':
             $controlador = new AuthController();
             $controlador->mostrarLogin();
             break;
         case 'auth':
             $controlador = new AuthController();
-            //$controlador->auth();
+            $controlador->auth();
             break;
         case 'logout':
             $controlador = new AuthController();
-           // $controlador->logout();
-            break;
+            $controlador->logout();
         default:
-            echo "404 Page Not Found"; //cambiar obvio
-            break;
-        case 'VerVideojuego':
-            $controladorViedeojuegos->VerVideojuegoId($params[1]);
+            echo "404 Page Not Found"; //cambiar 
             break;
     }
     
