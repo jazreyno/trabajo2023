@@ -12,6 +12,9 @@ class ControladorEmpresa{
     {
         $this->modeloempresa=new ModeloEmpresa();
         $this->vistaempresa=new VistaEmpresa();
+        //adasjdi
+        //dklaokda
+        //adkosdkakdoakd
     }
 
 
