@@ -9,6 +9,7 @@
 
         function __construct(){
             //agregar login
+            AuthHelper::verify();
 
             $this->modelojuegos=new ModeloJuegos();
             $this->vistajuegos=new VistaJuegos();
@@ -34,7 +35,7 @@
            
             $id = $this->modelojuegos->agregarJuego($videojuegos,$genero);
             if($id) {
-                header('Location: '.BASE_URL);
+                header('Location: '. BASE_URL);
             } else {
                 $this->vistajuegos->mostrarError("Error al insertar juego.");
             }

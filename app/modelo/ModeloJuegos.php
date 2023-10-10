@@ -17,7 +17,6 @@
             
               return $videojuegos;
         }
-<<<<<<< HEAD
 
         //Agregamos juegos a la base de datos.
         function agregarJuego($videojuegos,$genero){
@@ -33,16 +32,14 @@
         }
 
 
-=======
         
-        function verJuegosid($id){
+        function verJuegosId($id){
             $query =$this->db->prepare("SELECT * FROM videojuegos INNER JOIN companias  on videojuegos.id_empresa = companias.id_empresa ");
             $query->execute([$id]);
             $videojuegos= $query->fetchAll(PDO::FETCH_OBJ);
             
               return $videojuegos;
             }
->>>>>>> 1c7ee3d9f2bf0d37826af74ccf0dda6932d0a1ef
         }
 
 

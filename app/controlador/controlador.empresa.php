@@ -15,7 +15,6 @@ class ControladorEmpresa{
 
     }
 
-
     function verEmpresa(){
 
       $empresas = $this->modeloempresa->verEmpresa();
