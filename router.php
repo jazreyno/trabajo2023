@@ -5,7 +5,10 @@ require_once './app/controlador/ControladorEmpresa.php';
 require_once './app/controlador/ControladorUsuarios.php';
 
 
+
+
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
+<<<<<<< HEAD
 
 $action = 'Empresas';
 
@@ -32,3 +35,33 @@ switch ($params[0]) {
 
 
 
+=======
+   
+
+    if(!empty($_GET['action'])){
+        $action=$_GET['action'];
+    }
+    $controladorEmpresa= new ControladorEmpresa();
+    $controladorViedeojuegos= new ControladorVideojuegos();
+    $controladorUsuarios= new ControladorUsurios();
+    
+    $params=explode('/',$action);
+    switch($params[0]){
+
+        case 'home':
+            $controladorEmpresa ->verEmpresa();
+            break;
+        case 'videojuegos':
+            $controladorViedeojuegos -> VerVideojuegos();
+            break;
+        case 'usuario':
+            $controladorUsuarios->verusuarios();
+            break;
+        case 'VerVideojuego':
+            $controladorViedeojuegos->VerVideojuegoId($params[1]);
+            break;
+    }
+    
+
+?>
+>>>>>>> 2f9cc3154d60860a7d149a7ce7acd713f8bfc3fd
