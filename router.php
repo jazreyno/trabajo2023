@@ -29,6 +29,9 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
         case 'usuario':
             $controladorUsuarios->verusuarios();
             break;
+        case 'VerVideojuego':
+            $controladorViedeojuegos->VerVideojuegoId($params[1]);
+            break;
     }
     
 

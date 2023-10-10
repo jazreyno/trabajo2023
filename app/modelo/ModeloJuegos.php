@@ -17,6 +17,14 @@
         function insertarJuegos($videojuegos,$genero){
             $query=$this->db->prepare("INSERT INTO ");
         }
+        
+        function verJuegosid($id){
+            $query =$this->db->prepare("SELECT * FROM videojuegos INNER JOIN companias  on videojuegos.id_empresa = companias.id_empresa ");
+            $query->execute([$id]);
+            $videojuegos= $query->fetchAll(PDO::FETCH_OBJ);
+            
+              return $videojuegos;
+            }
         }
 
 
