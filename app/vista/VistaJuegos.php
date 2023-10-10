@@ -6,6 +6,10 @@ class VistaJuegos{
 
     }
 
+    public function mostrarError($error){
+        require 'templates/error.phtml';
+    }
+
 }
 
 ?>

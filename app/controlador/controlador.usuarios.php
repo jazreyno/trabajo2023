@@ -9,13 +9,12 @@
         private $modelousuarios;
         private $vistausuarios;
 
-        function __construct()
-        {
+        function __construct(){
             $this->modelousuarios=new ModeloUsuario();
             $this->vistausuarios=new VistaUsuarios();
         }
 
-        function verusuarios(){
+        function verUsuarios(){
             $usuarios=$this->modelousuarios->verUsuarios();
             $this->vistausuarios->Usuarios($usuarios);
         }
