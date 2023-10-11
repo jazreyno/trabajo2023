@@ -1,5 +1,5 @@
 <?php 
-
+require_once './templates/tablaempresa.php';
 class VistaEmpresa{
 
     function Empresas($id){
