@@ -16,13 +16,15 @@
         }
 
         function VerVideojuegos(){
-            $videojuegos= $this->modelojuegos->verJuegos();
-            $this->vistajuegos->juegos($videojuegos);
+            $videojuegos = $this->modelojuegos->verJuegos();
+            $this->vistajuegos->mostrarJuegos($videojuegos);
         }
+
         function VerVideojuegoId($id){
             $videojuegos=$this->modelojuegos->verJuegosId($id);
             $this->modelojuegos->verJuegosId($videojuegos);
         }
+
         function agregarJuego(){
             //Obtener datos del juego
             $videojuegos = $_POST['nombre'];
