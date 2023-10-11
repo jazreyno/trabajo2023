@@ -29,6 +29,18 @@ class ControladorEmpresa{
         $empresa=$this->modeloempresa->eliminarEmpresa($id);
         $this->vistaempresa->eliminarEmpresa($empresa);
     }
+    function agregarEmpresa(){
+        $nombre=$_POST['nombre'];
+        $cotizacion=$_POST['cotizacion'];
+        $fecha=$_POST['fecha_creacion'];
+        if(empty($nombre)|| empty($cotizacion)||empty($fecha)){
+            $this->modeloempresa->insertarEmpresa($nombre,$cotizacion,$fecha);
+          
+        }
+        else{
+            $this->vistaempresa->isertarerror();
+        }
 
+    }
 }
 ?>

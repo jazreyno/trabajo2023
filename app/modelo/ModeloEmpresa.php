@@ -24,7 +24,12 @@
         function eliminarEmpresa($id){
             $query=$this->db->prepare("DELETE FROM companias WHERE id_empresa = ?  ");
             $query->execute([$id]);
-            
+
+        }
+        function  insertarEmpresa($nombre,$cotizacion,$fecha){
+            $query=$this->db->prepare("INSERT INTO 'companias'(nombre,cotizacion,fecha_creacion) VALUES (?,?,?)");
+            $query->execute([$nombre,$cotizacion,$fecha]);
+            return $this->db->lastInsertId();
         }
         }
 
