@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2023 a las 23:53:43
+-- Tiempo de generación: 11-10-2023 a las 18:55:30
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -31,7 +31,19 @@ CREATE TABLE `companias` (
   `id_empresa` int(11) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `cotizacion` int(11) NOT NULL,
-  `fecha de creacion` date NOT NULL
+  `fecha_creacion` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(45) NOT NULL,
+  `contraseña` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -42,20 +54,10 @@ CREATE TABLE `companias` (
 
 CREATE TABLE `videojuegos` (
   `id_videojuegos` int(11) NOT NULL,
-  `nombre` text NOT NULL,
-  `id_empresa` varchar(45) NOT NULL DEFAULT '45',
-  `modo de juego` text NOT NULL
+  `nombre` varchar(45) NOT NULL,
+  `genero` text NOT NULL,
+  `id_empresa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `videojuegos`
---
-
-INSERT INTO `videojuegos` (`id_videojuegos`, `nombre`, `id_empresa`, `modo de juego`) VALUES
-(7, 'valorant', 'riot', 'shotter'),
-(8, 'fornite', 'riot', 'shootter'),
-(9, 'valorant', 'riot', 'shotter'),
-(10, 'fornite', 'riot', 'shootter');
 
 --
 -- Índices para tablas volcadas
@@ -65,15 +67,20 @@ INSERT INTO `videojuegos` (`id_videojuegos`, `nombre`, `id_empresa`, `modo de ju
 -- Indices de la tabla `companias`
 --
 ALTER TABLE `companias`
-  ADD PRIMARY KEY (`id_empresa`),
-  ADD KEY `nombre` (`nombre`);
+  ADD PRIMARY KEY (`id_empresa`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `videojuegos`
 --
 ALTER TABLE `videojuegos`
   ADD PRIMARY KEY (`id_videojuegos`),
-  ADD KEY `empresa` (`id_empresa`);
+  ADD KEY `id_empresa` (`id_empresa`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -86,10 +93,16 @@ ALTER TABLE `companias`
   MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `videojuegos`
 --
 ALTER TABLE `videojuegos`
-  MODIFY `id_videojuegos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_videojuegos` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -99,7 +112,7 @@ ALTER TABLE `videojuegos`
 -- Filtros para la tabla `videojuegos`
 --
 ALTER TABLE `videojuegos`
-  ADD CONSTRAINT `videojuegos_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `marcas` (`empresa`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `videojuegos_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `companias` (`id_empresa`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
