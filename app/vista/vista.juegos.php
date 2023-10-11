@@ -2,8 +2,8 @@
 
 class VistaJuegos{
 
-    function mostrarJuegos($juegos){
-            $count = count($juegos);
+    function mostrarJuegos($videojuegos){
+            $count = count($videojuegos);
 
             //mostramos el template lista de juegos
             require 'templates/listaJuegos.phtml';
