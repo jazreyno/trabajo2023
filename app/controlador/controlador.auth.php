@@ -1,6 +1,6 @@
 <?php
-require_once './app/views/auth.view.php';
-require_once './app/models/user.model.php';
+require_once './app/vista/vista.auth.php';
+require_once './app/modelo/modelo.usuarios.php';
 require_once './app/helpers/auth.helper.php';
 
 class AuthController {
@@ -17,8 +17,9 @@ class AuthController {
     }
 
     public function auth(){
+        //Obtengo datos del formulario
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = $_POST['contrasenia'];
 
         if(empty($email) || empty($password)) {
             $this->vista->mostrarLogin('Faltan completar campos');
@@ -27,7 +28,7 @@ class AuthController {
 
         $usuario = $this->modelo->obtenerPorEmail($email);
         if ($usuario && password_verify($password, $usuario->password)) {
-            
+            $this->vista->mostrarLogin('Usuario bien');
             AuthHelper::login($usuario);
             header('Location: ' . BASE_URL);
         } else {
@@ -35,8 +36,8 @@ class AuthController {
         }
     }
 
-        public function logout() {
-            AuthHelper::logout();
-            header('Location: ' . BASE_URL);
-        }
+    public function logout() {
+        AuthHelper::logout();
+        header('Location: ' . BASE_URL);
     }
+}

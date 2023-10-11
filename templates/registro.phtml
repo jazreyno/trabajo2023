@@ -1,0 +1,15 @@
+<?php
+
+    function registrarUsuario(){
+        $usuario = $_POST['usuario'];
+        $email = $_POST['email'];
+        $contrasenia = $_POST['contrasenia'];
+     
+        $query = "INSERT INTO usuario(usuario, email, contrasenia) VALUES('$usuario', '$email', '$contrasenia')";
+        
+         if (empty($usuario) || empty($email) ||empty($contrasenia)) {
+             echo "Error!";
+             return;
+    }
+   
+    

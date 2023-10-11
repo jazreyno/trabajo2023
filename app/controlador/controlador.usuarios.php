@@ -1,7 +1,7 @@
 <?php
 
-    require_once './app/modelo/ModeloUsuarios.php';
-    require_once './app/vista/VistaUsuarios.php';
+    require_once './app/modelo/modelo.usuarios.php';
+    require_once './app/vista/vista.usuarios.php';
 
     class ControladorUsuarios{
         function mostrarUsuarios(){

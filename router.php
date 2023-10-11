@@ -1,8 +1,8 @@
 <?php 
 
-require_once './app/controlador/ControladorJuego.php';
-require_once './app/controlador/ControladorEmpresa.php';
-require_once './app/controlador/ControladorUsuarios.php';
+require_once './app/controlador/controlador.juegos.php';
+require_once './app/controlador/controlador.empresa.php';
+require_once './app/controlador/controlador.usuarios.php';
 require_once './app/controlador/controlador.auth.php';
 
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
@@ -12,7 +12,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
         $action=$_GET['action'];
     }
 
-    /*$controladorEmpresa= new ControladorEmpresa();
+        /*$controladorEmpresa= new ControladorEmpresa();
     $controladorViedeojuegos= new ControladorVideojuegos();
     $controladorUsuarios= new ControladorUsurios();*/
     
@@ -24,22 +24,22 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador->VerVideojuegos();
             break;
         case 'videojuegoId':
-            $controlador = new ControladorVideojuegos();
+$controlador = new ControladorVideojuegos();
             $controlador->VerVideojuegoId($params[1]);
             break;
-        case 'verEmpresaId':
+case 'verEmpresaId':
             $controlador=new ControladorEmpresa();
             $controlador->JuegosPorEmpresa($params[1]);
             break;
         case 'agregar':
             $controlador = new ControladorVideojuegos();
             $controlador->agregarJuego();
-                break;         
+                break; 
         case 'eliminar':
             $controlador = new ControladorVideojuegos();
             $controlador->eliminarJuego($id);
             break;
-        case 'eliminarEmpresa':
+case 'eliminarEmpresa':
             $controlador=new ControladorEmpresa();
             $controlador->eliminarEmpresa($params[1]);
             break;

@@ -1,7 +1,7 @@
 <?php
 
-    require_once './app/modelo/ModeloEmpresa.php';
-    require_once './app/vista/VistaEmpresa.php';
+    require_once './app/modelo/modelo.empresa.php';
+    require_once './app/vista/vista.empresa.php';
 
 class ControladorEmpresa{
 

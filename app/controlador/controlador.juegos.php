@@ -1,7 +1,7 @@
 <?php 
 
-    require_once './app/modelo/ModeloJuegos.php';
-    require_once './app/vista/VistaJuegos.php';
+    require_once './app/modelo/modelo.juegos.php';
+    require_once './app/vista/vista.juegos.php';
    
     class ControladorVideojuegos{
         private $modelojuegos;

@@ -3,7 +3,7 @@
 class AuthVista{
 
     public function mostrarLogin($error = null){
-        require '.templates/login.phtml';
+        require 'templates/login.phtml';
     }
 }
 
