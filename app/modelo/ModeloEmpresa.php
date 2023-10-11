@@ -21,6 +21,11 @@
             $query->execute([$id]);
             return $query->fetchAll(PDO::FETCH_OBJ);
         }
+        function eliminarEmpresa($id){
+            $query=$this->db->prepare("DELETE FROM companias WHERE id_empresa = ?  ");
+            $query->execute([$id]);
+            
+        }
         }
 
 

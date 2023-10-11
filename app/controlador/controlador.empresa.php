@@ -23,7 +23,11 @@ class ControladorEmpresa{
     }
     function JuegosPorEmpresa($id){
         $empresa= $this ->modeloempresa->verEmpresaId($id);
-        $this->vistaempresa->Empresa($empresa);
+        $this->vistaempresa->Empresaid($empresa);
+    }
+    function eliminarEmpresa($id){
+        $empresa=$this->modeloempresa->eliminarEmpresa($id);
+        $this->vistaempresa->eliminarEmpresa($empresa);
     }
 
 }

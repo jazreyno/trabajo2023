@@ -5,7 +5,10 @@ class VistaEmpresa{
     function Empresas($id){
 
     }
-    function Empresa($id){
+    function Empresaid($id){
+
+    }
+    function eliminarEmpresa($id){
 
     }
 }

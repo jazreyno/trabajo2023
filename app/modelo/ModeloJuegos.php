@@ -27,7 +27,7 @@
         }
 
         function eliminarJuego($id){            
-            $query = $this->db->prepare('DELETE FROM videojuegos WHERE id_videojuegos = ?'); //Verificar los nombres si etan bien.
+            $query = $this->db->prepare('DELETE FROM videojuegos WHERE id_videojuegos = ?'); //Verificar los nombres si estan bien.
             $query->execute([$id]);
         }
 
