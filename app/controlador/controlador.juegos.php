@@ -29,15 +29,16 @@
             //Obtener datos del juego
             $nombre = $_POST['nombre'];
             $genero = $_POST['genero'];
-            $id_empresa = $_POST['id_empresa'];
+            $empresa = $_POST['id_empresa'];
+            var_dump($empresa);
 
             //Validacion
-            if (empty($nombre) || empty($genero) || empty($id_empresa)) {
+            if (empty($nombre) || empty($genero) || empty($empresa)) {
                 $this->vistajuegos->mostrarError("Completar los campos vacios.");
                 return;
             }
 
-            $id = $this->modelojuegos->agregarJuego($nombre,$genero, $id_empresa);
+            $id = $this->modelojuegos->agregarJuego($nombre,$genero, $empresa);
             if($id) {
                 header('Location: '. BASE_URL);
             } else {
