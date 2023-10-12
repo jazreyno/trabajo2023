@@ -16,8 +16,8 @@ class VistaEmpresa{
         
     }
     function MostrarSelect($empresas){
-        $empresas;
-       // include './templates/form_tienda.phtml';
+    
+        require_once './templates/form_tienda.phtml';
     }
 }
   

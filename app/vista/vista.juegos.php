@@ -3,11 +3,12 @@
 class VistaJuegos{
 
     function mostrarJuegos($videojuegos){
-    $count = count($videojuegos);
+    //$count = count($videojuegos);
        
     
+   
+    require_once 'templates/form_tienda.phtml';
     require_once 'templates/listaJuegos.phtml';
-    //include 'templates/form_tienda.phtml';
     }
 
     public function mostrarError($error){

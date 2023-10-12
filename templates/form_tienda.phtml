@@ -1,4 +1,4 @@
-<?php require_once './app/vista/vista.juegos.php';?>
+<?php require_once 'templates/header.phtml';?>
 <?php require_once './app/vista/vista.empresa.php';?>
 
 <form action="agregar" method="POST" class="my-4">
@@ -12,16 +12,21 @@
     <div class="col-3">
             <div class="form-group">
                 <label>Empresas</label>
+                <?php echo ($empresas);  ?>
                 <select required name="id_empresa" class="form-control" id="id_empresa">
-                    <?php foreach($empresa as $empresas):  ?>
-                     <option value="<?= $empresas->id_empresa ?>"><?= $empresas->nombre ?></option>
+                    <?php 
+                    
+                    foreach($empresa as $empresas):  ?>
+                     <option value="$empresas->id_empresa"><?= $empresas->nombre ?></option>
+                      
                     <?php endforeach ?>
-                </select>
+                    </select>
             
             </div>
         </div>
 
     <button type="submit">Enviar</button>
 </form>
+<?php require 'templates/footer.phtml' ?>
 
                
