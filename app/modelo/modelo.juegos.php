@@ -21,7 +21,7 @@
         //Agregamos juegos a la base de datos.
         //INSERT INTO `videojuegos`(`id_videojuegos`, `nombre`, `genero`, `id_empresa`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
         function agregarJuego($nombre,$genero,$empresa){
-            $query=$this->db->prepare("INSERT INTO `videojuegos`(`nombre`, `genero`, `id_empresa`) VALUES(?,?,?)");
+            $query=$this->db->prepare("INSERT INTO `videojuegos`(`videojuego`, `genero`, `id_empresa`) VALUES(?,?,?)");
             $query->execute([$nombre,$genero,$empresa]);
 
             return $this->db->lastInsertId();

@@ -28,18 +28,5 @@
                   <a class="nav-link" aria-current="page" href="empresas">Empresas</a>
                     <li class="nav-item">
                       <a class="nav-link" aria-current="page" href="login" href="login">Login</a>
-                    </li><!--
-                  {else}
-                    <li class="nav-item ml-auto">
-                         
-                      <a class="nav-link" aria-current="page" href="logout">Logout ({$smarty.session.USER_EMAIL})</a>
                     </li>
-                  {/if}-->
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
-
-    <!-- inicio main container -->
     <main class="container">
