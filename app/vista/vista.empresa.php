@@ -10,8 +10,8 @@ class VistaEmpresa{
     }
 
     function Empresas($empresa){
-        $this->smarty->assign ("videojuegos",$empresa);
-        $this->smarty->display("tablaEmpresas.tpl");
+        $this->smarty->assign ("empresa",$empresa);
+        $this->smarty->display("tablaempresa.tpl");
     }
     function Empresaid($id){
 
