@@ -30,8 +30,7 @@
             $nombre = $_POST['nombre'];
             $genero = $_POST['genero'];
             $empresa = $_POST['id_empresa'];
-            var_dump($empresa);
-
+           
             //Validacion
             if (empty($nombre) || empty($genero) || empty($empresa)) {
                 $this->vistajuegos->mostrarError("Completar los campos vacios.");

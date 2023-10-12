@@ -20,8 +20,10 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
 
     switch($params[0]) {
         case 'videojuegos':
-            $controlador = new ControladorVideojuegos();
-            $controlador->VerVideojuegos();
+            $controladorVideojuegos = new ControladorVideojuegos();
+            $controladorEmpresa=new ControladorEmpresa();
+            $controladorEmpresa->MostrarSelect();
+            $controladorVideojuegos->VerVideojuegos();
             break;
         case 'videojuegoId':
             $controlador = new ControladorVideojuegos();

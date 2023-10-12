@@ -1,33 +1,5 @@
-<!--Formulario de juegos
-
-hacer login y logout
-
-{if isset($smarty.session.USER_ID)}
-<form method="POST" class="row g-3" action="insertarproductos">
-    <div class="col-auto">
-        <label for="inputPassword2" class="visually-hidden">Productos</label>
-        <input class="form-control" type="text" placeholder="producto" name="producto">
-        <label for="inputPassword2" class="visually-hidden">cantidad</label>
-        <input class="form-control" type="number" placeholder="cantidad" name="cantidad">
-        <label for="inputPassword2" class="visually-hidden">precio</label>
-        <input class="form-control" type="number" placeholder="precio" name="precio">
-    </div>
-<div class="col-3">
-        <div class="form-group">
-            <label>Marcas</label>
-            <select name="marcas" class="form-control">
-            {foreach from=$marcas item=$marca }
-                <option value="{$marca->id_marcas}">{$marca->marcas}</option>
-            {/foreach}
-            </select>
-        </div>
-            <button type="submit" class="btn btn-warning">insertar</button>
-        </div>
-</div>
-</form>
-{/if}
-
--->
+<?php require_once './app/vista/vista.juegos.php';?>
+<?php require_once './app/vista/vista.empresa.php';?>
 
 <form action="agregar" method="POST" class="my-4">
     <label for="">Nombre Videojuego</label>
@@ -41,14 +13,15 @@ hacer login y logout
             <div class="form-group">
                 <label>Empresas</label>
                 <select required name="id_empresa" class="form-control" id="id_empresa">
-                    <option value="1">Riot</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <?php foreach($empresa as $empresas):  ?>
+                     <option value="<?= $empresas->id_empresa ?>"><?= $empresas->nombre ?></option>
+                    <?php endforeach ?>
                 </select>
+            
             </div>
         </div>
 
     <button type="submit">Enviar</button>
 </form>
+
+               

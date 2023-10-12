@@ -40,7 +40,12 @@ class ControladorEmpresa{
         else{
             $this->vistaempresa->isertarerror();
         }
-
+        
     }
+    function MostrarSelect(){
+            $empresa=$this->modeloempresa->verEmpresa();
+            $this->vistaempresa->MostrarSelect($empresa);
+    }
+    
 }
 ?>

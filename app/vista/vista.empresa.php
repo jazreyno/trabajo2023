@@ -1,9 +1,10 @@
 <?php 
-require_once './templates/tablaempresa.php';
+
+//include './templates/form_tienda.phtml';
 class VistaEmpresa{
 
-    function Empresas($id){
-
+    function Empresas($empresa){
+        require_once './templates/tablaempresa.php';
     }
     function Empresaid($id){
 
@@ -13,6 +14,10 @@ class VistaEmpresa{
     }
     function isertarerror(){
         
+    }
+    function MostrarSelect($empresas){
+        $empresas;
+       // include './templates/form_tienda.phtml';
     }
 }
   
