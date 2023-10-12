@@ -52,7 +52,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador = new ControladorEmpresa();
             $controlador->verEmpresa();                
             break;
-        case 'usuario':
+        /*case 'usuario':
             $controlador = new ControladorUsurios();
             $controlador->verUsuarios();
             break;   
@@ -66,9 +66,9 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             break;
         case 'logout':
             $controlador = new AuthController();
-            $controlador->logout();
+            $controlador->logout();*/
         default:
-            echo "404 Page Not Found"; //cambiar 
+            echo "404 Page Not Fousnd"; //cambiar 
             break;
     }
     

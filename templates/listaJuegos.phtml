@@ -1,3 +1,18 @@
-<?php require 'templates/header.phtml' ?>
+<?php 
+require 'templates/header.phtml';
+require 'templates/form_tienda.phtml'; ?>
 
-<?php require 'templates/footer.phtml' ?>
+<table>
+    <?php foreach($videojuegos as $videojuego):  ?>
+        <td class="list-group-item item-task">
+            <?= $videojuego->nombre ?>
+            <?= $videojuego->genero ?>
+            <?= $videojuego->id_empresa ?>
+
+        </td>
+<?php endforeach ?>
+</table>
+
+
+<?php 
+require 'templates/footer.phtml' ?>

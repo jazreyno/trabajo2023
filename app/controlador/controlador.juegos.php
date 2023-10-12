@@ -9,7 +9,7 @@
 
         function __construct(){
             //agregar login
-            AuthHelper::verify();
+            //AuthHelper::verify();
 
             $this->modelojuegos=new ModeloJuegos();
             $this->vistajuegos=new VistaJuegos();
@@ -27,18 +27,18 @@
 
         function agregarJuego(){
             //Obtener datos del juego
-            $videojuegos = $_POST['nombre'];
+            $nombre = $_POST['nombre'];
             $genero = $_POST['genero'];
+            $empresa = $_POST['id_empresa'];
+            var_dump($empresa);
 
             //Validacion
-            if (empty($videojuegos) || empty($genero)) {
+            if (empty($nombre) || empty($genero) || empty($empresa)) {
                 $this->vistajuegos->mostrarError("Completar los campos vacios.");
                 return;
             }
 
-           // $empresa=$_POST['id_empresa'];
-           
-            $id = $this->modelojuegos->agregarJuego($videojuegos,$genero);
+            $id = $this->modelojuegos->agregarJuego($nombre,$genero, $empresa);
             if($id) {
                 header('Location: '. BASE_URL);
             } else {
