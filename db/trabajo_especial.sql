@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2023 a las 02:11:18
+-- Tiempo de generación: 14-10-2023 a las 19:47:13
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -34,14 +34,6 @@ CREATE TABLE `companias` (
   `fecha_creacion` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `companias`
---
-
-INSERT INTO `companias` (`id_empresa`, `nombre`, `cotizacion`, `fecha_creacion`) VALUES
-(1, 'riot', 1000, '2023-10-04'),
-(2, 'epic', 1000, '0000-00-00');
-
 -- --------------------------------------------------------
 
 --
@@ -66,15 +58,6 @@ CREATE TABLE `videojuegos` (
   `genero` text NOT NULL,
   `id_empresa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `videojuegos`
---
-
-INSERT INTO `videojuegos` (`id_videojuegos`, `videojuego`, `genero`, `id_empresa`) VALUES
-(1, 'Julian', 'dsa', 1),
-(2, 'lol', 'shoter', 1),
-(3, 'valo', 'tiros', 1);
 
 --
 -- Índices para tablas volcadas
@@ -129,7 +112,7 @@ ALTER TABLE `videojuegos`
 -- Filtros para la tabla `videojuegos`
 --
 ALTER TABLE `videojuegos`
-  ADD CONSTRAINT `videojuegos_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `companias` (`id_empresa`);
+  ADD CONSTRAINT `videojuegos_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `companias` (`id_empresa`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
