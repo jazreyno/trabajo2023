@@ -7,8 +7,8 @@
    
        <tr> <td><a href="verProductoMarca/{$empresas->id_empresa} ">  {$empresas->nombre} </a></td>  
       
-       <td><a href='borrarMarcas/{$marca->id_marcas}'class="btn btn-danger" > Eliminar </a></td>
-       <td><a href='editarMarcasForm/{$marca->id_marcas}'class="btn btn-success"> Editar </a></td>
+       <td><a href='borrarMarcas/{$empresas->id_empresa}'class="btn btn-danger" > Eliminar </a></td>
+       <td><a href='editarMarcasForm/{$empresas->id_empresa}'class="btn btn-success"> Editar </a></td>
        </tr>
      
  {/foreach}

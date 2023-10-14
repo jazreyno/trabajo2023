@@ -47,7 +47,7 @@
 
         function eliminarJuego($id){
             $this->modelojuegos->eliminarJuego($id);
-            header('Location: '.BASE_URL);
+            header('Location: '. BASE_URL . "videojuegos");
         }
 
         
