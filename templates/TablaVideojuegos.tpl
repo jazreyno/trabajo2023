@@ -12,7 +12,7 @@
               <td><a href="vervideojuego/{$videojuego->id_empresa} ">  {$videojuego->nombre} </a></td>  
               <td><a href='videojuegoid/{$videojuego->id_videojuegos}'class="btn btn-info" id="eliminar" type="sumbit"> ver mas </a></td>     
               <td><a href='eliminarvideojuego/{$videojuego->id_videojuegos}'class="btn btn-danger"  type="sumbit"> Eliminar </a></td>
-              <td><a href='editarProductosForm/{$producto->id_productos}'class="btn btn-success" type="sumbit"> Editar</a></td>    
+              <td><a href='editarvideojuegos/{$producto->id_productos}'class="btn btn-success" type="sumbit"> Editar</a></td>    
              
       </tr>
  {/foreach}   

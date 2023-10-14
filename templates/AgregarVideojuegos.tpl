@@ -1,5 +1,5 @@
 
-<form method="POST" class="row g-3" action="agregar">
+<form method="POST" class="row g-3" action="agregar" id="form-videojuego">
     <div class="col-auto">
         <label for="inputPassword2" class="visually-hidden">nombre</label>
         <input class="form-control" type="text" placeholder="nombre" name="videojuego">

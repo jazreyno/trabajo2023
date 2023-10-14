@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-14 20:10:32
+/* Smarty version 4.2.1, created on 2023-10-14 20:54:29
   from 'C:\xampp3\htdocs\trabajo2023\templates\vervideojuego.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652ad9981e3b92_91891485',
+  'unifunc' => 'content_652ae3e54997d5_22285528',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd6416b726bd135c8ef646c89b75ade80645a4daf' => 
     array (
       0 => 'C:\\xampp3\\htdocs\\trabajo2023\\templates\\vervideojuego.tpl',
-      1 => 1697306364,
+      1 => 1697308066,
       2 => 'file',
     ),
   ),
@@ -22,14 +22,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652ad9981e3b92_91891485 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652ae3e54997d5_22285528 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <table class="table table-success table-striped-columns" id="tabla">
 <h1> DETALLES </h1>
 <th> videojuego </th>
 <th> genero </th>
-<th> empresa </th>
+<th> Empresas </th>
 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['videojuegos']->value, 'videojuego');
 $_smarty_tpl->tpl_vars['videojuego']->do_else = true;
@@ -41,7 +41,7 @@ $_smarty_tpl->tpl_vars['videojuego']->do_else = false;
  </td> 
         <td>  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->genero;?>
  </td> 
-            <td><?php echo $_smarty_tpl->tpl_vars['videojuego']->value->nombre;?>
+        <td>  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->nombre;?>
 </td>
             <?php if ((isset($_SESSION['USER_ID']))) {?>
             <td><a href='editarProductosForm/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_empresa;?>

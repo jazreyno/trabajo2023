@@ -49,6 +49,16 @@
             $this->modelojuegos->eliminarJuego($id);
             header('Location: '. BASE_URL . "videojuegos");
         }
+        function editarvideojuegos($id){
+            
+            $nombre = $_POST['videojuego_edit'];
+            $genero = $_POST['genero_edit'];
+            $empresa = $_POST['empresa_edit'];
+
+            $this->modelojuegos->editarvideojuegos($nombre,$genero,$empresa,$id);
+
+            header('Location: '. BASE_URL . "videojuegos");
+        }
 
         
 

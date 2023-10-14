@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(to bottom, rgb(75, 4, 114), rgb(130, 44, 177));
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto evita que el fondo se desplace con el contenido /
+    background-size: cover; / Esto ajusta el tamaño del fondo para cubrir todo el body */
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+main, #form-videojuego{
+
+    margin-top: 100px;
+
+}
+header{
+    position: fixed;
+    top: 0;
+    margin-bottom: 150px;
+
+
+}       
