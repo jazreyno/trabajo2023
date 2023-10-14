@@ -16,9 +16,6 @@ class VistaEmpresa{
     function Empresaid($id){
 
     }
-    function eliminarEmpresa($id){
-
-    }
     function isertarerror(){
         
     }

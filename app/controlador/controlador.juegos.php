@@ -22,7 +22,7 @@
 
         function VerVideojuegoId($id){
             $videojuegos=$this->modelojuegos->verJuegosId($id);
-            $this->modelojuegos->verJuegosId($videojuegos);
+            $this->vistajuegos->verJuegosId($videojuegos);
         }
 
         function agregarJuego(){

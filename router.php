@@ -21,7 +21,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controladorEmpresa->MostrarSelect();
             $controladorVideojuegos->VerVideojuegos();
             break;
-        case 'videojuegoId':
+        case 'videojuegoid':
             $controlador = new ControladorVideojuegos();
             $controlador->VerVideojuegoId($params[1]);
             break;
