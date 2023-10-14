@@ -1,25 +1,34 @@
 <?php 
-require 'templates/header.phtml';
+require 'templates/header.tpl';
+?>
+
+<?php 
+    $contrasenia = "12345";
+    $contraseniaEncriptada = password_hash($contrasenia, PASSWORD_DEFAULT);
+    // echo ("Clave encriptada $passwordEncriptado")
+
 ?>
 
 <h2>Login</h2>
 <div>
-    <form action="" method="POST">
-        <label for="email">Email</label>
-        <input type="email" required placeholder="ingrese email">
-
-        <label for="password">Password</label>
-        <input type="password" required placeholder="ingrese password">
-
+<form method="POST" action="auth">
         <?php if ($error) : ?>
-            <div>
+            <div class='alert alert-danger' role='alert'>
                 <?= $error ?>
-            </div>
+            </div> 
         <?php endif ?>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" required class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="contrasenia">Password</label>
+            <input type="password" required class="form-control" id="contrasenia" name="contrasenia">
+        </div>
 
         <button type="submit">Login</button>
 
     </form>
 </div>
 
-<?php require 'templates/footer.phtml' ?>
+<?php require 'templates/footer.tpl' ?>

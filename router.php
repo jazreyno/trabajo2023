@@ -12,10 +12,6 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
         $action=$_GET['action'];
     }
 
-        /*$controladorEmpresa= new ControladorEmpresa();
-    $controladorViedeojuegos= new ControladorVideojuegos();
-    $controladorUsuarios= new ControladorUsurios();*/
-    
     $params = explode('/', $action);
 
     switch($params[0]) {
@@ -54,14 +50,14 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador = new ControladorEmpresa();
             $controlador->verEmpresa();                
             break;
-        /*case 'usuario':
+        case 'usuario':
             $controlador = new ControladorUsurios();
             $controlador->verUsuarios();
             break;   
         case 'login':
             $controlador = new AuthController();
             $controlador->mostrarLogin();
-            break;
+            break;/*
         case 'auth':
             $controlador = new AuthController();
             $controlador->auth();
