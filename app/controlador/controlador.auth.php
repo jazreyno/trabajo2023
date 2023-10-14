@@ -9,7 +9,7 @@ class AuthController {
 
     function __construct(){
         $this->vista = new AuthVista();
-        $this->modelo = new ModeloUsuario;
+        $this->modelo = new ModeloUsuario();
     }
 
     public function mostrarLogin(){
@@ -32,7 +32,7 @@ class AuthController {
             AuthHelper::login($usuario);
             header('Location: ' . BASE_URL);
         } else {
-            $this->vista->mostrarLogin('Usuario invalido');
+            $this->vista->mostrarLogin('Usuario como el culo');
         }
     }
 
