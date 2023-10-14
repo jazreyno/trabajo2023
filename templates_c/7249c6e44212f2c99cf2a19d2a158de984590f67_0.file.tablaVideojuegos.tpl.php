@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-14 20:21:40
+/* Smarty version 4.2.1, created on 2023-10-14 20:40:57
   from 'C:\xampp3\htdocs\trabajo2023\templates\tablaVideojuegos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652adc3445e7a3_85394373',
+  'unifunc' => 'content_652ae0b9cd0f49_29599485',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7249c6e44212f2c99cf2a19d2a158de984590f67' => 
     array (
       0 => 'C:\\xampp3\\htdocs\\trabajo2023\\templates\\tablaVideojuegos.tpl',
-      1 => 1697307678,
+      1 => 1697308837,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652adc3445e7a3_85394373 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652ae0b9cd0f49_29599485 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h1>Videojuegos</h1>
@@ -42,17 +42,16 @@ $_smarty_tpl->tpl_vars['videojuego']->do_else = false;
  </td> 
               <td>  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->genero;?>
  </td> 
-              <td><a href="verProductoMarca/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_empresa;?>
+              <td><a href="vervideojuego/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_empresa;?>
  ">  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->nombre;?>
  </a></td>  
               <td><a href='videojuegoid/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_videojuegos;?>
-'class="btn btn-info" id="eliminar" type="sumbit"> ver mas </a></td> 
-              <?php if ((isset($_SESSION['USER_ID']))) {?>
-              <td><a href='borrarProductos/<?php echo $_smarty_tpl->tpl_vars['producto']->value->id_productos;?>
+'class="btn btn-info" id="eliminar" type="sumbit"> ver mas </a></td>     
+              <td><a href='eliminarvideojuego/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_videojuegos;?>
 'class="btn btn-danger"  type="sumbit"> Eliminar </a></td>
               <td><a href='editarProductosForm/<?php echo $_smarty_tpl->tpl_vars['producto']->value->id_productos;?>
 'class="btn btn-success" type="sumbit"> Editar</a></td>    
-              <?php }?>
+             
       </tr>
  <?php
 }

@@ -20,7 +20,7 @@ class VistaJuegos{
         {
             $this->smarty->assign ("videojuegos",$videojuegos);
             $this->smarty->display("vervideojuego.tpl");
-        
+
         }
        
 
