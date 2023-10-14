@@ -4,7 +4,7 @@
         private $db;
 
         function __construct(){
-            $this->db = new PDO('mysql:host=localhost;dbname=trabajo_especial ;charset=utf8', 'root', '');
+            $this->db = new PDO('mysql:host=localhost;dbname=trabajo_especial;charset=utf8', 'root', '');
         }
 
         function verUsuarios(){
@@ -13,7 +13,7 @@
             $usuario= $query->fetchAll(PDO::FETCH_OBJ);
          
               return $usuario;
-            
+            //
         }
 
         //OBTENEMOS USUARIOS POR EMAIL?

@@ -1,10 +1,17 @@
 <?php 
-
-//include './templates/form_tienda.phtml';
+require_once './libs/smarty-4.2.1/libs/Smarty.class.php';
 class VistaEmpresa{
 
+    private $smarty;
+
+    function __construct()
+    {
+        $this->smarty=new Smarty();
+    }
+
     function Empresas($empresa){
-        require_once './templates/tablaempresa.php';
+        $this->smarty->assign ("empresa",$empresa);
+        $this->smarty->display("tablaempresa.tpl");
     }
     function Empresaid($id){
 
@@ -15,9 +22,10 @@ class VistaEmpresa{
     function isertarerror(){
         
     }
-    function MostrarSelect($empresas){
-    
-        require_once './templates/form_tienda.phtml';
+    function MostrarSelect($empresa){
+        $this->smarty->assign ("empresa",$empresa);
+        $this->smarty->display("AgregarVideojuegos.tpl");
+       
     }
 }
   

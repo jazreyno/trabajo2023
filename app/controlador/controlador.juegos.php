@@ -27,7 +27,7 @@
 
         function agregarJuego(){
             //Obtener datos del juego
-            $nombre = $_POST['nombre'];
+            $nombre = $_POST['videojuego'];
             $genero = $_POST['genero'];
             $empresa = $_POST['id_empresa'];
            
@@ -39,7 +39,7 @@
 
             $id = $this->modelojuegos->agregarJuego($nombre,$genero, $empresa);
             if($id) {
-                header('Location: '. BASE_URL);
+                header('Location: '. BASE_URL . "videojuegos");
             } else {
                 $this->vistajuegos->mostrarError("Error al insertar juego.");
             }
