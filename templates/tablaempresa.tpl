@@ -6,7 +6,6 @@
 <th> cotizacion </th>
 <th> fecha de creacion</th>
 {foreach from=$empresa item=$empresas}
-
       <tr>
       <td><a href="empresas/{$empresas->id_empresa} ">  {$empresas->nombre} </a></td> 
       <td>  {$empresas->cotizacion} </td> 

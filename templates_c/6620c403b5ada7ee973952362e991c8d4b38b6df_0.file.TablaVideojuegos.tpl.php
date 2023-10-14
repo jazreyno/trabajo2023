@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-14 20:23:23
-  from 'C:\xampp\htdocs\web\TRABAJO ESPECIAL\trabajo2023-3\trabajo2023\templates\tablaVideojuegos.tpl' */
+/* Smarty version 4.2.1, created on 2023-10-14 21:38:27
+  from 'C:\xampp3\htdocs\trabajo2023\templates\TablaVideojuegos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652adc9be6f8b3_65133101',
+  'unifunc' => 'content_652aee33109160_37810574',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '1ddf2f3a991b73dedf3330147e98395f7d22f06d' => 
+    '6620c403b5ada7ee973952362e991c8d4b38b6df' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\web\\TRABAJO ESPECIAL\\trabajo2023-3\\trabajo2023\\templates\\tablaVideojuegos.tpl',
-      1 => 1697307788,
+      0 => 'C:\\xampp3\\htdocs\\trabajo2023\\templates\\TablaVideojuegos.tpl',
+      1 => 1697311946,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652adc9be6f8b3_65133101 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652aee33109160_37810574 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h1>Videojuegos</h1>
@@ -42,17 +42,16 @@ $_smarty_tpl->tpl_vars['videojuego']->do_else = false;
  </td> 
               <td>  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->genero;?>
  </td> 
-              <td><a href="verProductoMarca/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_empresa;?>
+              <td><a href="vervideojuego/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_empresa;?>
  ">  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->nombre;?>
  </a></td>  
               <td><a href='videojuegoid/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_videojuegos;?>
-'class="btn btn-info" id="eliminar" type="sumbit"> ver mas </a></td> 
-              <?php if ((isset($_SESSION['USER_ID']))) {?>
-              <td><a href='borrarProductos/<?php echo $_smarty_tpl->tpl_vars['producto']->value->id_productos;?>
+'class="btn btn-info" id="eliminar" type="sumbit"> ver mas </a></td>     
+              <td><a href='eliminarvideojuego/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_videojuegos;?>
 'class="btn btn-danger"  type="sumbit"> Eliminar </a></td>
-              <td><a href='editarProductosForm/<?php echo $_smarty_tpl->tpl_vars['producto']->value->id_productos;?>
+              <td><a href='editarvideojuegos/<?php echo $_smarty_tpl->tpl_vars['producto']->value->id_productos;?>
 'class="btn btn-success" type="sumbit"> Editar</a></td>    
-              <?php }?>
+             
       </tr>
  <?php
 }

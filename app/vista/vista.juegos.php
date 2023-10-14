@@ -9,8 +9,8 @@ class VistaJuegos{
         $this->smarty=new Smarty();
     }
     function mostrarJuegos($videojuegos){
-    $this->smarty->assign ("videojuegos",$videojuegos);
-    $this->smarty->display("tablaVideojuegos.tpl");
+        $this->smarty->assign ("videojuegos",$videojuegos);
+        $this->smarty->display("TablaVideojuegos.tpl");
     }
 
     public function mostrarError($error){
