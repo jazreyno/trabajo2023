@@ -18,9 +18,8 @@
 
         //OBTENEMOS USUARIOS POR EMAIL quitar el *
         public function obtenerPorEmail($usuario){
-            $query = $this->db->prepare('SELECT * FROM usuarios WHERE usuario = ?');
+            $query = $this->db->prepare('SELECT * FROM usuario WHERE usuario = ?');
             $query->execute([$usuario]);
-
             return $query->fetch(PDO::FETCH_OBJ);
         }
 

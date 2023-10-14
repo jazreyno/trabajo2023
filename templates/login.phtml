@@ -3,9 +3,10 @@ require 'templates/header.tpl';
 ?>
 
 <?php 
+
     $contrasenia = "12345";
     $contraseniaEncriptada = password_hash($contrasenia, PASSWORD_DEFAULT);
-    // echo ("Clave encriptada $passwordEncriptado")
+    echo ("Clave encriptada $contraseniaEncriptada");
 
 ?>
 
@@ -19,7 +20,7 @@ require 'templates/header.tpl';
         <?php endif ?>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" required class="form-control" id="email" name="email">
+            <input type="text" required class="form-control" id="email" name="email">
         </div>
         <div class="form-group">
             <label for="contrasenia">Password</label>

@@ -1,26 +1,19 @@
 <?php
-
     require_once './app/modelo/modelo.usuarios.php';
     require_once './app/vista/vista.usuarios.php';
 
-    class ControladorUsuarios{
-        function mostrarUsuarios(){
-        }
-    }
-    
-  
     
     class ControladorUsurios{
-        private $modelousuarios;
-        private $vistausuarios;
+        private $modelo;
+        private $vista;
 
         function __construct(){
-            $this->modelousuarios = new ModeloUsuario();
-            $this->vistausuarios = new VistaUsuarios();
+            $this->modelo = new ModeloUsuario();
+            $this->vista = new VistaUsuarios();
         }
 
         function verUsuarios(){
-            $usuarios=$this->modelousuarios->verUsuarios();
-            $this->vistausuarios->Usuarios($usuarios);
+            $usuarios=$this->modelo->verUsuarios();
+            $this->vista->Usuarios($usuarios);
         }
     }

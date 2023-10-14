@@ -1,10 +1,11 @@
 <?php
-require_once 'modelo/modelo.usuarios.php';
+require_once './app/modelo/modelo.usuarios.php';
+
 
 class AuthHelper {
     private $modelo;
 
-    function public function __construct(Type $var = null) {
+    public function __construct() {
         $this->modelo = new ModeloUsuario();
 
     }
@@ -23,7 +24,9 @@ class AuthHelper {
             $_SESSION['id'] = $usuario->id; //Cambiar nombres por las de la tabla usuario
             $_SESSION['usuario'] = $usuario->usuario; 
 
-        } else echo "Error";
+        } else {
+            echo "Error";
+        } 
     }
 
 
