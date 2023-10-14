@@ -9,7 +9,7 @@ class AuthController {
 
     function __construct(){
         $this->vista = new AuthVista();
-        $this->modelo = new ModeloUsuario;
+        $this->modelo = new ModeloUsuario();
     }
 
     public function mostrarLogin(){
@@ -27,8 +27,8 @@ class AuthController {
         }
 
         $usuario = $this->modelo->obtenerPorEmail($email);
-        if ($usuario && password_verify($password, $usuario->password)) {
-            $this->vista->mostrarLogin('Usuario bien');
+      /*  if ($usuario && password_verify($password, $usuario->password)) {
+            $this->vista->mostrarLogin('Usuario bien');*/
             AuthHelper::login($usuario);
             header('Location: ' . BASE_URL);
         } else {
