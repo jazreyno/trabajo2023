@@ -26,9 +26,9 @@ class ControladorEmpresa{
         $this->vistaempresa->Empresaid($empresa);
     }
     function eliminarEmpresa($id){
-        $empresa=$this->modeloempresa->eliminarEmpresa($id);
-        $this->vistaempresa->eliminarEmpresa($empresa);
-        header('Location: '. BASE_URL . "empresas");
+     
+        $this->modeloempresa->eliminarEmpresa($id);
+        header('Location: '. BASE_URL . "empresa");
     }
     function agregarEmpresa(){
         $nombre=$_POST['nombre'];

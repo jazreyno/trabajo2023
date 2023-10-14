@@ -33,7 +33,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador = new ControladorVideojuegos();
             $controlador->agregarJuego();
                 break; 
-        case 'eliminar':
+        case 'eliminarvideojuego':
             $controlador = new ControladorVideojuegos();
             $controlador->eliminarJuego($id);
             break;
