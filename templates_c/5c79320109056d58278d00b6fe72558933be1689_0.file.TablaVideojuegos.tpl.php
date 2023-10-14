@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-14 20:23:23
-  from 'C:\xampp\htdocs\web\TRABAJO ESPECIAL\trabajo2023-3\trabajo2023\templates\tablaVideojuegos.tpl' */
+/* Smarty version 4.2.1, created on 2023-10-14 20:37:56
+  from 'C:\xampp\htdocs\web\TRABAJO ESPECIAL\trabajo2023-3\trabajo2023\templates\TablaVideojuegos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652adc9be6f8b3_65133101',
+  'unifunc' => 'content_652ae004ce8358_40347895',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '1ddf2f3a991b73dedf3330147e98395f7d22f06d' => 
+    '5c79320109056d58278d00b6fe72558933be1689' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\web\\TRABAJO ESPECIAL\\trabajo2023-3\\trabajo2023\\templates\\tablaVideojuegos.tpl',
+      0 => 'C:\\xampp\\htdocs\\web\\TRABAJO ESPECIAL\\trabajo2023-3\\trabajo2023\\templates\\TablaVideojuegos.tpl',
       1 => 1697307788,
       2 => 'file',
     ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652adc9be6f8b3_65133101 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652ae004ce8358_40347895 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h1>Videojuegos</h1>

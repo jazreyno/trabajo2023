@@ -7,7 +7,6 @@ class AuthHelper {
 
     public function __construct() {
         $this->modelo = new ModeloUsuario();
-
     }
 
     public static function init() {
