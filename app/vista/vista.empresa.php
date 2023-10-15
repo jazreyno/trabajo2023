@@ -31,6 +31,8 @@ class VistaEmpresa{
     
     }
      function editar ($empresa){
+        $this->smarty->assign ("empresa",$empresa);
+        $this->smarty->display("editempresa.tpl");
 
      }
 }

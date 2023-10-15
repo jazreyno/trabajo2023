@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-14 21:44:06
+/* Smarty version 4.2.1, created on 2023-10-15 17:44:18
   from 'C:\xampp3\htdocs\trabajo2023\templates\tablaempresa.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652aef86643975_80079093',
+  'unifunc' => 'content_652c08d2ba6304_91254802',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b5751bae5598198a45cdfdbf0e9e5328e4335682' => 
     array (
       0 => 'C:\\xampp3\\htdocs\\trabajo2023\\templates\\tablaempresa.tpl',
-      1 => 1697312413,
+      1 => 1697384648,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652aef86643975_80079093 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652c08d2ba6304_91254802 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h1>Empresas</h1>
@@ -41,7 +41,7 @@ $_smarty_tpl->tpl_vars['empresas']->do_else = false;
       <td><a href="empresas/<?php echo $_smarty_tpl->tpl_vars['empresas']->value->id_empresa;?>
  ">  <?php echo $_smarty_tpl->tpl_vars['empresas']->value->nombre;?>
  </a></td> 
-      <td>  <?php echo $_smarty_tpl->tpl_vars['empresas']->value->cotizacion;?>
+       <td><?php echo $_smarty_tpl->tpl_vars['empresas']->value->cotizacion;?>
  </td> 
        <td><?php echo $_smarty_tpl->tpl_vars['empresas']->value->fecha_creacion;?>
  </td> 
