@@ -47,6 +47,21 @@ class ControladorEmpresa{
             $empresa=$this->modeloempresa->verEmpresa();
             $this->vistaempresa->MostrarSelect($empresa);
     }
+    function mostrareditEmpresa(){
+        $empresa=$this->modeloempresa->verEmpresa();
+        $this->vistaempresa->mostrareditEmpresa($empresa);
+    }
+    function editarEmpresa($id){
+        $empresa=$this->modeloempresa->verEmpresaId($id);
+        $this->vistaempresa->editar($empresa);
+    }
+    function editarForm($id){
+        $nombre_edit=$_POST['nombre_edit'];
+        $cotizacion_edit=$_POST['cotizacion_edit'];
+        $fecha_edit=$_POST['fecha_creacion_edit'];
+
+        $this->modeloempresa->editarEmpresa($nombre_edit,$cotizacion_edit,$fecha_edit,$id);
+    }
     
 }
 ?>

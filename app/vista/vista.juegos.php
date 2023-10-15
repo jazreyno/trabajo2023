@@ -17,13 +17,17 @@ class VistaJuegos{
         require 'templates/error.phtml';
     }
     function verJuegosId($videojuegos){
-        {
+  
             $this->smarty->assign ("videojuegos",$videojuegos);
             $this->smarty->display("vervideojuego.tpl");
 
-        }
-       
-
+     
+    }
+    function mostrareditar($videojuegos){
+        
+            $this->smarty->assign ("videojuegos",$videojuegos);
+            $this->smarty->display("editVideojuegos.tpl");
+        
     }
 
 }

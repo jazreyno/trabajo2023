@@ -59,6 +59,10 @@
 
             header('Location: '. BASE_URL . "videojuegos");
         }
+        function mostraredit($id){
+            $videojuegos=$this->modelojuegos->verJuegosId($id);
+            $this->vistajuegos->mostrareditar($videojuegos);
+        }
 
         
 

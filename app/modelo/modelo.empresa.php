@@ -32,7 +32,10 @@
             $query->execute([$nombre,$cotizacion,$fecha]);
             return $this->db->lastInsertId();
         }
-    
+        function editarEmpresa($nombre_edit,$cotizacion_edit,$fecha_edit,$id){
+            $query=$this->db->prepare ("UPDATE `companias` SET nombre = ?,cotizacion = ?, fecha_creacion= ? WHERE id_empresa = ?");
+            $query->execute([$nombre_edit,$cotizacion_edit,$fecha_edit,$id]);
+        }
         }
 
 

@@ -25,6 +25,14 @@ class VistaEmpresa{
         $this->smarty->display("AgregarVideojuegos.tpl");
        
     }
+    function mostrareditEmpresa($empresa){
+        $this->smarty->assign ("empresa",$empresa);
+        $this->smarty->display("editVideojeugos2.tpl");
+    
+    }
+     function editar ($empresa){
+
+     }
 }
   
 
