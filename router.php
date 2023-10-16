@@ -36,7 +36,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
         case 'eliminarVideojuego':
             $controlador = new ControladorVideojuegos();
             $id=$params[1];
-            $controlador->eliminarJuego($id);//
+            $controlador->eliminarJuego($id);
             break;
         case 'eliminarEmpresa':
             $controlador=new ControladorEmpresa();
@@ -68,14 +68,18 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controladorVideojuegos->mostrarEditarJuegos($params[1]);
             $controladorEmpresa->mostrareditEmpresa($params[1]);
             break;
-        case 'editarEmpresa':
+        case 'actualizarJuego':
+            $controladorVideojuegos=new ControladorVideojuegos;
+            $controladorVideojuegos->actualizarJuego();
+      /* ver boton 
+       case 'editarEmpresa':
             $controlador=new ControladorEmpresa;
             $controlador->editarEmpresa($params[1]);
             break;
         case 'editarEmpresaform':
             $controlador=new ControladorEmpresa;
             $controlador->editarForm($params[1]);
-            break;
+            break;*/
         case 'logout':
             $controlador = new AuthController();
             $controlador->logout();

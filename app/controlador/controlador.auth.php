@@ -22,14 +22,27 @@ class AuthController {
         $contrasenia = $_POST['contrasenia'];
 
          //buscamos el usuarios
-         $usuario = $this->modelo->obtenerPorEmail($email);
+        $usuario = $this->modelo->obtenerPorEmail($email);
 
-         /*
-         if(!empty($email) || empty($contrasenia)) {
-            $this->vista->mostrarLogin('Faltan completar campos');
-            return;
-        }*/
+        if(!empty($usuario) && password_verify($contrasenia, $usuario->contraseña) ){ 
+        //inicio la sesion y logueo al usuario
+        session_start();
 
+        //  AuthHelper::login($usuario);
+        $_SESSION['USER_ID'] = $usuario->id;
+        $_SESSION['USER_EMAIL'] = $usuario->email;
+        $_SESSION['IS_LOGGED'] = true;
+
+        header('Location: ' . BASE_URL);
+            die();
+        } else {
+            $this->vista->mostrarLogin('Usuario como el cul23o');
+        }
+            
+
+        
+
+/* segunda manera bien de inicar sesion
         if(empty($usuario)){
             $this->vista->mostrarLogin('Usuario como el cul23o');
             die();
@@ -41,17 +54,11 @@ class AuthController {
         } else {
             echo "bien";
         }
-
-        //encontro al usuario
-         /*if (!empty($usuario) && password_verify($contrasenia, $usuario->contraseña)){*/
-
             
-            //inicio la sesion y logueo al usuario
+        //inicio la sesion y logueo al usuario
           session_start();
 
-          //  AuthHelper::login($usuario);
-
-
+        //  AuthHelper::login($usuario);
         $_SESSION['USER_ID'] = $usuario->id;
         $_SESSION['USER_EMAIL'] = $usuario->email;
 
@@ -59,7 +66,7 @@ class AuthController {
          /*else {
             $this->vista->mostrarLogin('Usuario como el culo');
         }*/
-
+    
   
         
     }

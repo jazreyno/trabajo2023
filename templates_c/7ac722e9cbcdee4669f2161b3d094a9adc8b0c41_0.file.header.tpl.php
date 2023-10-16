@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-16 19:33:37
+/* Smarty version 4.2.1, created on 2023-10-17 00:44:38
   from 'D:\xamp\htdocs\web\trabajo2023\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652d73f194c393_80292502',
+  'unifunc' => 'content_652dbcd6e98cd8_42708650',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ac722e9cbcdee4669f2161b3d094a9adc8b0c41' => 
     array (
       0 => 'D:\\xamp\\htdocs\\web\\trabajo2023\\templates\\header.tpl',
-      1 => 1697477226,
+      1 => 1697495852,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652d73f194c393_80292502 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652dbcd6e98cd8_42708650 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +51,7 @@ function content_652d73f194c393_80292502 (Smarty_Internal_Template $_smarty_tpl)
                   <a class="nav-link" aria-current="page" href="empresas">Empresas</a>
                   <?php if (!(isset($_SESSION['USER_ID']))) {?> 
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="login" href="login">Login</a>
+                      <a class="nav-link" aria-current="page" href="login">Login</a>
                     </li>
                   <?php } else { ?>
                     <li class="nav-item ml-auto">

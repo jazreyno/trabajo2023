@@ -27,7 +27,7 @@
                   <a class="nav-link" aria-current="page" href="empresas">Empresas</a>
                   {if !isset($smarty.session.USER_ID)} 
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="login" href="login">Login</a>
+                      <a class="nav-link" aria-current="page" href="login">Login</a>
                     </li>
                   {else}
                     <li class="nav-item ml-auto">

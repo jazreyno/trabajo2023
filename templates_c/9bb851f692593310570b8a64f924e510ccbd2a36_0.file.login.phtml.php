@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-16 17:41:22
+/* Smarty version 4.2.1, created on 2023-10-17 00:51:15
   from 'D:\xamp\htdocs\web\trabajo2023\templates\login.phtml' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652d59a257eae6_26399874',
+  'unifunc' => 'content_652dbe63a04319_78474949',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9bb851f692593310570b8a64f924e510ccbd2a36' => 
     array (
       0 => 'D:\\xamp\\htdocs\\web\\trabajo2023\\templates\\login.phtml',
-      1 => 1697470881,
+      1 => 1697472502,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652d59a257eae6_26399874 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652dbe63a04319_78474949 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<?php'; ?>
  
 require 'templates/header.tpl';
@@ -29,10 +29,10 @@ require 'templates/header.tpl';
 
 <?php echo '<?php'; ?>
  
-
+/*
     $contrasenia = "12345";
     $contraseniaEncriptada = password_hash($contrasenia, PASSWORD_DEFAULT);
-    echo ("Clave encriptada $contraseniaEncriptada");
+    echo ("Clave encriptada $contraseniaEncriptada");*/
 
 <?php echo '?>'; ?>
 
@@ -66,12 +66,9 @@ require 'templates/header.tpl';
 </div>
 
 <?php echo '<?php'; ?>
- require 'templates/footer.phtml' <?php echo '?>'; ?>
+ require 'templates/footer.tpl';
+ <?php echo '?>'; ?>
 
-
-
-<?php echo '<?php'; ?>
- require 'templates/footer.tpl' <?php echo '?>'; ?>
 
 <?php }
 }

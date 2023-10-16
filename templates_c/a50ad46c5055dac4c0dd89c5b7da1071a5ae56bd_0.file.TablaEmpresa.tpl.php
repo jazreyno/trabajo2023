@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-16 19:37:22
+/* Smarty version 4.2.1, created on 2023-10-16 22:12:31
   from 'D:\xamp\htdocs\web\trabajo2023\templates\TablaEmpresa.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652d74d2b3a942_66007897',
+  'unifunc' => 'content_652d992f527ad8_81494175',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a50ad46c5055dac4c0dd89c5b7da1071a5ae56bd' => 
     array (
       0 => 'D:\\xamp\\htdocs\\web\\trabajo2023\\templates\\TablaEmpresa.tpl',
-      1 => 1697477057,
+      1 => 1697483142,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_652d74d2b3a942_66007897 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652d992f527ad8_81494175 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:AgregarEmpresa.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

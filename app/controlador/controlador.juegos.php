@@ -55,19 +55,24 @@
         ////////////////////
         //EDITAR VIDEOJUEGOS!
         ////////////////////
+
         
-        function editarVideojuegos($id){
-          //  $this->helper->checkLoggedIn();
+
+        function actualizarJuego(){
             $nombre = $_POST['videojuego_edit'];
             $genero = $_POST['genero_edit'];
             $empresa = $_POST['empresa_edit'];
+            $id = $_POST['videojuego_id'];
 
-            $this->modelojuegos->editarVideojuegos($nombre,$genero,$empresa,$id);
+            $this->modelojuegos->actualizarJuego($nombre, $genero, $empresa, $id);   
 
             header('Location: '. BASE_URL . "videojuegos");
+
         }
+        
 
         function mostrarEditarJuegos($id){
+            //  $this->helper->checkLoggedIn();
             $videojuegos=$this->modelojuegos->verJuegosId($id);
             $this->vistajuegos->mostrarEditar($videojuegos);
         }

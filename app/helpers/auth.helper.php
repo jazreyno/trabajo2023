@@ -7,7 +7,7 @@ class AuthHelper {
         }
     }
 
-    public static function login($user, $password) {
+    public static function login($user) {
         //$usuario = $this->modelo->obtenerPorEmail($user);
         AuthHelper::init();
             $_SESSION['USER_ID'] = $user->id; 

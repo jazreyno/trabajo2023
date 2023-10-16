@@ -10,7 +10,7 @@ class VistaJuegos{
     }
 
     function mostrarJuegos($videojuegos){
-        $this->smarty->assign ("videojuegos",$videojuegos);
+        $this->smarty->assign("videojuegos",$videojuegos);
         $this->smarty->display("TablaVideojuegos.tpl");
     }
 
@@ -19,13 +19,14 @@ class VistaJuegos{
     }
 
     function verJuegosId($videojuegos){
-            $this->smarty->assign ("videojuegos",$videojuegos);
+            $this->smarty->assign("videojuegos",$videojuegos);
             $this->smarty->display("vervideojuego.tpl");
     }
 
     //EDITAR
     function mostrarEditar($videojuegos){
-            $this->smarty->assign ("videojuegos",$videojuegos);
+        echo "<br><br><br>";
+            $this->smarty->assign("videojuegos",$videojuegos);
             $this->smarty->display("editVideojuegos.tpl");
         
     }
