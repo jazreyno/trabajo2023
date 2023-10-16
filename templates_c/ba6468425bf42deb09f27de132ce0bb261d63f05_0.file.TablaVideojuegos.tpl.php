@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-16 09:30:49
+/* Smarty version 4.2.1, created on 2023-10-16 17:49:28
   from 'D:\xamp\htdocs\web\trabajo2023\templates\TablaVideojuegos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652ce6a994a0b8_80207849',
+  'unifunc' => 'content_652d5b88ad0da4_05519571',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba6468425bf42deb09f27de132ce0bb261d63f05' => 
     array (
       0 => 'D:\\xamp\\htdocs\\web\\trabajo2023\\templates\\TablaVideojuegos.tpl',
-      1 => 1697441446,
+      1 => 1697471368,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652ce6a994a0b8_80207849 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652d5b88ad0da4_05519571 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h1>Videojuegos</h1>

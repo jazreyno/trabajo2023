@@ -1,6 +1,4 @@
 <?php
-require_once './app/modelo/modelo.usuarios.php';
-
 
 class AuthHelper {
     public static function init() {
@@ -10,21 +8,23 @@ class AuthHelper {
     }
 
     public static function login($user, $password) {
-        $usuario = $this->modelo->obtenerPorEmail($user);
+        //$usuario = $this->modelo->obtenerPorEmail($user);
         AuthHelper::init();
-        if ($usuario && password_verify($password, $usuario->password)) {
-            $this->vista->mostrarLogin('Usuario bien');
-            $_SESSION['USER_ID'] = $usuario->id; 
-            $_SESSION['USER_EMAIL'] = $usuario->usuario; 
+            $_SESSION['USER_ID'] = $user->id; 
+            $_SESSION['USER_EMAIL'] = $user->email; 
+            //$_SESSION['USER_EMAIL'] = $user->password; 
+
         } 
-    }
 
 
+    //lo que hace este if es que si ya esta la session empezada  no la vuelva a comenzar
     public static function logout() {
         AuthHelper::init();
         session_destroy();
     }
+    
 
+    
     public static function verify() {
         AuthHelper::init();
         if (!isset($_SESSION['USER_ID'])) {

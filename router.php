@@ -36,7 +36,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
         case 'eliminarVideojuego':
             $controlador = new ControladorVideojuegos();
             $id=$params[1];
-            $controlador->eliminarJuego($id);
+            $controlador->eliminarJuego($id);//
             break;
         case 'eliminarEmpresa':
             $controlador=new ControladorEmpresa();

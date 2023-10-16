@@ -1,7 +1,12 @@
 {include file="header.tpl"}
 
 {foreach from=$empresa item=$empresas}
-    {*en el form pongo el metodo y la accion de mi router*}
+    {*en el form pongo el metodo y la accion de mi router
+    
+    nombre_edit
+    cotizacion_edit
+    fecha_edit
+    *}
     <form method="POST" action='editarEmpresaform/{$empresas->id_empresa}'>
     <label>Nombre</label>
     <input  type="text" name="nombre_edit" value="{$empresas->nombre}">
@@ -9,5 +14,6 @@
     <input  name="fecha_edit" value="{$empresas->fecha_creacion}">
 {/foreach}
   
+
     <input type="submit" value="editar">
     </form>

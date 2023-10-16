@@ -19,23 +19,52 @@ class AuthController {
     public function auth(){
         //Obtengo datos del formulario
         $email = $_POST['email'];
-        $password = $_POST['contrasenia'];
+        $contrasenia = $_POST['contrasenia'];
 
-        if(empty($email) || empty($password)) {
+         //buscamos el usuarios
+         $usuario = $this->modelo->obtenerPorEmail($email);
+
+         /*
+         if(!empty($email) || empty($contrasenia)) {
             $this->vista->mostrarLogin('Faltan completar campos');
             return;
+        }*/
+
+        if(empty($usuario)){
+            $this->vista->mostrarLogin('Usuario como el cul23o');
+            die();
         }
 
-        $usuario = $this->modelo->obtenerPorEmail($email);
-        if ($usuario && password_verify($password, $usuario->password)) {
-            $this->vista->mostrarLogin('Usuario bien');
-            AuthHelper::login($usuario);
-            header('Location: ' . BASE_URL);
+        if(!password_verify($contrasenia, $usuario->contraseña)){
+            $this->vista->mostrarLogin('contra mal');
+            die();
         } else {
-            $this->vista->mostrarLogin('Usuario como el culo');
+            echo "bien";
         }
-    }
 
+        //encontro al usuario
+         /*if (!empty($usuario) && password_verify($contrasenia, $usuario->contraseña)){*/
+
+            
+            //inicio la sesion y logueo al usuario
+          session_start();
+
+          //  AuthHelper::login($usuario);
+
+
+        $_SESSION['USER_ID'] = $usuario->id;
+        $_SESSION['USER_EMAIL'] = $usuario->email;
+
+            header('Location: ' . BASE_URL);
+         /*else {
+            $this->vista->mostrarLogin('Usuario como el culo');
+        }*/
+
+  
+        
+    }
+       
+       
     public function logout() {
         AuthHelper::logout();
         header('Location: ' . BASE_URL);
