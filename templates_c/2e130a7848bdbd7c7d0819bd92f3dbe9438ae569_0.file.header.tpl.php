@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-16 03:26:47
-  from 'C:\xampp3\htdocs\trabajo2023\templates\header.tpl' */
+/* Smarty version 4.2.1, created on 2023-10-16 00:39:48
+  from 'C:\xampp\htdocs\trabajojaz\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652c915785af16_03342245',
+  'unifunc' => 'content_652c6a34aec246_69846052',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'e6b1d404c2b5f4b7b1d7a33fa9b88b90e44154a8' => 
+    '2e130a7848bdbd7c7d0819bd92f3dbe9438ae569' => 
     array (
-      0 => 'C:\\xampp3\\htdocs\\trabajo2023\\templates\\header.tpl',
+      0 => 'C:\\xampp\\htdocs\\trabajojaz\\templates\\header.tpl',
       1 => 1697409584,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652c915785af16_03342245 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652c6a34aec246_69846052 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

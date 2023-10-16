@@ -44,7 +44,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             break;
         case 'agregarEmpresa':
             $controlador=new ControladorEmpresa();
-            $controlador->agregarEmpresa($params[1]);
+            $controlador->agregarEmpresa();
             break;
         case 'empresas':
             $controlador = new ControladorEmpresa();

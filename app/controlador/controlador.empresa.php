@@ -28,7 +28,7 @@ class ControladorEmpresa{
     function eliminarEmpresa($id){
      
         $this->modeloempresa->eliminarEmpresa($id);
-        header('Location: '. BASE_URL . "empresa");
+        header('Location: '. BASE_URL . "empresas");
     }
     function agregarEmpresa(){
         $nombre=$_POST['nombre'];
@@ -36,11 +36,13 @@ class ControladorEmpresa{
         $fecha=$_POST['fecha_creacion'];
         if(empty($nombre)|| empty($cotizacion)||empty($fecha)){
             $this->modeloempresa->insertarEmpresa($nombre,$cotizacion,$fecha);
+            
           
         }
         else{
             $this->vistaempresa->isertarerror();
         }
+        header('Location: '. BASE_URL . "empresas");
         
     }
     function MostrarSelect(){
@@ -52,15 +54,16 @@ class ControladorEmpresa{
         $this->vistaempresa->mostrareditEmpresa($empresa);
     }
     function editarEmpresa($id){
-        $empresa=$this->modeloempresa->verEmpresaId($id);
-        $this->vistaempresa->editar($empresa);
+        $nombre_edit= $_POST['nombre_edit'];
+        $cotizacion_edit= $_POST['cotizacion_edit'];
+        $fecha_edit= $_POST['fecha_creacion_edit'];
+        $this->modeloempresa->editarEmpresa($nombre_edit,$cotizacion_edit,$fecha_edit,$id);
+        header('Location: '. BASE_URL . "empresas");
+
     }
     function editarForm($id){
-        $nombre_edit=$_POST['nombre_edit'];
-        $cotizacion_edit=$_POST['cotizacion_edit'];
-        $fecha_edit=$_POST['fecha_creacion_edit'];
-
-        $this->modeloempresa->editarEmpresa($nombre_edit,$cotizacion_edit,$fecha_edit,$id);
+        $empresa=$this->modeloempresa->verEmpresaId($id);
+        $this->vistaempresa->editar($empresa);
     }
     
 }

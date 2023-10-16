@@ -28,8 +28,8 @@
 
         }
         function  insertarEmpresa($nombre,$cotizacion,$fecha){
-            $query=$this->db->prepare("INSERT INTO 'companias'(nombre,cotizacion,fecha_creacion) VALUES (?,?,?)");
-            $query->execute([$nombre,$cotizacion,$fecha]);
+            $query=$this->db->prepare("INSERT INTO companias (nombre,cotizacion,fecha_creacion) VALUES (?,?,?)");
+            $query->execute([$nombre, $cotizacion, $fecha]);
             return $this->db->lastInsertId();
         }
         function editarEmpresa($nombre_edit,$cotizacion_edit,$fecha_edit,$id){
