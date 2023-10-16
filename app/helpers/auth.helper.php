@@ -3,12 +3,6 @@ require_once './app/modelo/modelo.usuarios.php';
 
 
 class AuthHelper {
-    private $modelo;
-
-    public function __construct() {
-        $this->modelo = new ModeloUsuario();
-    }
-
     public static function init() {
         if (session_status() != PHP_SESSION_ACTIVE) {
             session_start();
@@ -17,14 +11,11 @@ class AuthHelper {
 
     public static function login($user, $password) {
         $usuario = $this->modelo->obtenerPorEmail($user);
-//        AuthHelper::init();
+        AuthHelper::init();
         if ($usuario && password_verify($password, $usuario->password)) {
             $this->vista->mostrarLogin('Usuario bien');
-            $_SESSION['id'] = $usuario->id; //Cambiar nombres por las de la tabla usuario
-            $_SESSION['usuario'] = $usuario->usuario; 
-
-        } else {
-            echo "Error";
+            $_SESSION['USER_ID'] = $usuario->id; 
+            $_SESSION['USER_EMAIL'] = $usuario->usuario; 
         } 
     }
 
@@ -34,12 +25,11 @@ class AuthHelper {
         session_destroy();
     }
 
-    /*
     public static function verify() {
         AuthHelper::init();
         if (!isset($_SESSION['USER_ID'])) {
             header('Location: ' . BASE_URL . '/login');
             die();
         }
-    }*/
+    }
 }

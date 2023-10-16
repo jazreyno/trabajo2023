@@ -2,7 +2,6 @@
 
 require_once './app/controlador/controlador.juegos.php';
 require_once './app/controlador/controlador.empresa.php';
-require_once './app/controlador/controlador.usuarios.php';
 require_once './app/controlador/controlador.auth.php';
 
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
@@ -14,10 +13,11 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
 
     $params = explode('/', $action);
 
+
     switch($params[0]) {
         case 'videojuegos':
             $controladorVideojuegos = new ControladorVideojuegos();
-            $controladorEmpresa=new ControladorEmpresa();
+            $controladorEmpresa = new ControladorEmpresa();
             $controladorEmpresa->MostrarSelect();
             $controladorVideojuegos->VerVideojuegos();
             break;
@@ -33,7 +33,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador = new ControladorVideojuegos();
             $controlador->agregarJuego();
                 break; 
-        case 'eliminarvideojuego':
+        case 'eliminarVideojuego':
             $controlador = new ControladorVideojuegos();
             $id=$params[1];
             $controlador->eliminarJuego($id);
@@ -50,10 +50,6 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador = new ControladorEmpresa();
             $controlador->verEmpresa();                
             break;
-        case 'usuario':
-            $controlador = new ControladorUsurios();
-            $controlador->verUsuarios();
-            break;   
         case 'login':
             $controlador = new AuthController();
             $controlador->mostrarLogin();
@@ -64,13 +60,12 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             break;
         case 'editarvideojuegos':
             $controlador=new ControladorVideojuegos();
-            $id=$params[1];
-            $controlador->  editarvideojuegos($id);
+            $controlador->editarvideojuegos($params[1]);
             break;
         case 'editarVideojuegosform':
             $controladorVideojuegos=new ControladorVideojuegos;
             $controladorEmpresa=new ControladorEmpresa;
-            $controladorVideojuegos->mostraredit($params[1]);
+            $controladorVideojuegos->mostrarEditarJuegos($params[1]);
             $controladorEmpresa->mostrareditEmpresa($params[1]);
             break;
         case 'editarEmpresa':
@@ -81,9 +76,9 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador=new ControladorEmpresa;
             $controlador->editarForm($params[1]);
             break;
-        /*case 'logout':
+        case 'logout':
             $controlador = new AuthController();
-            $controlador->logout();*/
+            $controlador->logout();
         default:
             echo "404 Page Not Fousnd"; //cambiar 
             break;

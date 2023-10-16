@@ -15,7 +15,7 @@ class AuthController {
     public function mostrarLogin(){
         $this->vista->mostrarLogin();
     }
-
+    
     public function auth(){
         //Obtengo datos del formulario
         $email = $_POST['email'];

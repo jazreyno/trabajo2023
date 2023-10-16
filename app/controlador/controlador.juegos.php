@@ -1,18 +1,20 @@
 <?php 
-
     require_once './app/vista/vista.juegos.php';
     require_once './app/modelo/modelo.juegos.php';
+    require_once './app/helpers/auth.helper.php';
+
 
     class ControladorVideojuegos{
         private $modelojuegos;
         private $vistajuegos;
+        private $helper;
 
         function __construct(){
             //agregar login
             //AuthHelper::verify();
-
             $this->modelojuegos=new ModeloJuegos();
             $this->vistajuegos=new VistaJuegos();
+            $this->helper=new AuthHelper();
         }
 
         function VerVideojuegos(){
@@ -49,19 +51,25 @@
             $this->modelojuegos->eliminarJuego($id);
             header('Location: '. BASE_URL . "videojuegos");
         }
-        function editarvideojuegos($id){
-            
+
+        ////////////////////
+        //EDITAR VIDEOJUEGOS!
+        ////////////////////
+        
+        function editarVideojuegos($id){
+          //  $this->helper->checkLoggedIn();
             $nombre = $_POST['videojuego_edit'];
             $genero = $_POST['genero_edit'];
             $empresa = $_POST['empresa_edit'];
 
-            $this->modelojuegos->editarvideojuegos($nombre,$genero,$empresa,$id);
+            $this->modelojuegos->editarVideojuegos($nombre,$genero,$empresa,$id);
 
             header('Location: '. BASE_URL . "videojuegos");
         }
-        function mostraredit($id){
+
+        function mostrarEditarJuegos($id){
             $videojuegos=$this->modelojuegos->verJuegosId($id);
-            $this->vistajuegos->mostrareditar($videojuegos);
+            $this->vistajuegos->mostrarEditar($videojuegos);
         }
 
         

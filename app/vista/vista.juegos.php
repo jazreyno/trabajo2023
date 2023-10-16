@@ -8,6 +8,7 @@ class VistaJuegos{
     {
         $this->smarty=new Smarty();
     }
+
     function mostrarJuegos($videojuegos){
         $this->smarty->assign ("videojuegos",$videojuegos);
         $this->smarty->display("TablaVideojuegos.tpl");
@@ -16,15 +17,14 @@ class VistaJuegos{
     public function mostrarError($error){
         require 'templates/error.phtml';
     }
+
     function verJuegosId($videojuegos){
-  
             $this->smarty->assign ("videojuegos",$videojuegos);
             $this->smarty->display("vervideojuego.tpl");
-
-     
     }
-    function mostrareditar($videojuegos){
-        
+
+    //EDITAR
+    function mostrarEditar($videojuegos){
             $this->smarty->assign ("videojuegos",$videojuegos);
             $this->smarty->display("editVideojuegos.tpl");
         

@@ -11,12 +11,14 @@ class VistaEmpresa{
     }
 
     function Empresas($empresa){
-        $this->smarty->assign ("empresa",$empresa);
-        $this->smarty->display("tablaempresa.tpl");
+        $this->smarty->assign("empresa",$empresa);
+        $this->smarty->display("TablaEmpresa.tpl");
     }
-    function Empresaid($id){
 
+    function Empresaid($id){
+        
     }
+    
     function isertarerror(){
         
     }
