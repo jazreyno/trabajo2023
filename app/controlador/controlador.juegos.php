@@ -21,16 +21,19 @@
         }
 
         function VerVideojuegos(){
+            $this->helper->checkInicio();
             $videojuegos = $this->modelojuegos->verJuegos();
             $this->vistajuegos->mostrarJuegos($videojuegos);
         }
 
         function VerVideojuegoId($id){
+            $this->helper->checkInicio();
             $videojuegos=$this->modelojuegos->verJuegosId($id);
             $this->vistajuegos->verJuegosId($videojuegos);
         }
 
         function agregarJuego(){
+            $this->helper->checkLoggedIn();
             //Obtener datos del juego
             $nombre = $_POST['videojuego'];
             $genero = $_POST['genero'];
@@ -51,6 +54,7 @@
         }
 
         function eliminarJuego($id){
+            $this->helper->checkLoggedIn();
             $this->modelojuegos->eliminarJuego($id);
             header('Location: '. BASE_URL . "/videojuegos");
         }
@@ -60,20 +64,20 @@
         ////////////////////
 
         function actualizarJuego(){
+            
             $nombre = $_POST['videojuego_edit'];
             $genero = $_POST['genero_edit'];
             $empresa = $_POST['empresa_edit'];
-            $id = $_POST['videojuego_id'];
-
+            $id= $_POST['videojuego_id'];
             $this->modelojuegos->actualizarJuego($nombre, $genero, $empresa, $id);   
 
-            header('Location: '. BASE_URL . "/videojuegos");
+            header("Location: ". BASE_URL . "videojuegos");
 
         }
         
 
         function mostrarEditarJuegos($id){
-            //  $this->helper->checkLoggedIn();
+            $this->helper->checkLoggedIn();
             $videojuegos = $this->modelojuegos->verJuegosId($id);
             $empresas = $this->modeloEmpresa->verEmpresa();
             $this->vistajuegos->mostrarEditar($videojuegos, $empresas);

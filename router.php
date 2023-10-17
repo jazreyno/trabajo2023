@@ -29,6 +29,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador=new ControladorEmpresa();
             $controlador->JuegosPorEmpresa($params[1]);
             break;
+
         case 'agregar':
             $controlador = new ControladorVideojuegos();
             $controlador->agregarJuego();
@@ -51,13 +52,18 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             $controlador->verEmpresa();                
             break;
         case 'login':
-            $controlador = new AuthController();
-            $controlador->mostrarLogin();
+            $controlador = new controladorUsuarios();
+            $controlador->vistaLogin();
             break;
-        case 'auth':
-            $controlador = new AuthController();
-            $controlador->auth();
-            break;/*
+        case 'validar':
+            $controlador = new controladorUsuarios();
+            $controlador->validarUsuario();
+            break;
+        case 'logout':
+            $controlador = new ControladorUsuarios();
+            $controlador->logout();
+            break;
+                /*
         case 'editarvideojuegos':
             $controlador=new ControladorVideojuegos();
             $controlador->actualizarJuego($params[1]);
@@ -70,22 +76,24 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             break;
         case 'actualizarJuego':
             $controladorVideojuegos=new ControladorVideojuegos;
-            $controladorVideojuegos->actualizarJuego(); 
-        
-        
+
+            $controladorVideojuegos->actualizarJuego($params[1]); 
+            break;
+
+            
        case 'editarEmpresa':
             $controlador=new ControladorEmpresa;
+        
             $controlador->editarEmpresa($params[1]);
             break;
         case 'editarEmpresaform':
             $controlador=new ControladorEmpresa;
+            
             $controlador->editarForm($params[1]);
             break;
-        case 'logout':
-            $controlador = new AuthController();
-            $controlador->logout();
+  
         default:
-            echo "404 Page Not Fousnd"; //cambiar 
+            echo "404 Page Not Found"; //cambiar 
             break;
     }
     

@@ -14,9 +14,6 @@ class VistaJuegos{
         $this->smarty->display("TablaVideojuegos.tpl");
     }
 
-    public function mostrarError($error){
-        require 'templates/error.phtml';
-    }
 
     function verJuegosId($videojuegos){
             $this->smarty->assign("videojuegos",$videojuegos);

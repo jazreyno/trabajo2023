@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-16 00:42:02
+/* Smarty version 4.2.1, created on 2023-10-17 08:41:35
   from 'C:\xampp\htdocs\trabajojaz\templates\vervideojuego.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652c6aba0b1ca3_70494129',
+  'unifunc' => 'content_652e2c9fefa8a8_47081484',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '918ef4d074ce252ad36a583afc7cd4448de038c8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\trabajojaz\\templates\\vervideojuego.tpl',
-      1 => 1697385942,
+      1 => 1697524895,
       2 => 'file',
     ),
   ),
@@ -22,14 +22,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652c6aba0b1ca3_70494129 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652e2c9fefa8a8_47081484 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <table class="table table-success table-striped-columns" id="tabla">
 <h1> DETALLES </h1>
-<th> videojuego </th>
+<th> nombre </th>
 <th> genero </th>
-<th> Empresas </th>
+<th> empresa </th>
 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['videojuegos']->value, 'videojuego');
 $_smarty_tpl->tpl_vars['videojuego']->do_else = true;
@@ -41,8 +41,9 @@ $_smarty_tpl->tpl_vars['videojuego']->do_else = false;
  </td> 
         <td>  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->genero;?>
  </td> 
-        <td>  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->nombre;?>
-</td>
+        <td><a href="verEmpresaId/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_empresa;?>
+ ">  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->nombre;?>
+ </a></td>
             <?php if ((isset($_SESSION['USER_ID']))) {?>
             <td><a href='editarProductosForm/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_empresa;?>
 'class="btn btn-success"  type="sumbit"> Editar</a></td>

@@ -22,6 +22,7 @@ class VistaEmpresa{
     function isertarerror(){
         
     }
+
     function MostrarSelect($empresa){
         $this->smarty->assign ("empresa",$empresa);
         $this->smarty->display("AgregarVideojuegos.tpl");

@@ -7,11 +7,14 @@
     cotizacion_edit
     fecha_edit
     *}
-    <form method="POST" action='editarEmpresaform'>
+    <form method="POST" action='editarEmpresa'>
     <label>Nombre</label>
     <input  type="text" name="nombre_edit" value="{$empresas->nombre}">
-    <input  type="nombre" name="cotizacion_edit" value="{$empresas->cotizacion}">
-    <input  name="fecha_edit" value="{$empresas->fecha_creacion}">
+    <label>Cotizacion</label>
+    <input  type="int" name="cotizacion_edit" value="{$empresas->cotizacion}">
+    <label>Año creacion</label>
+    <input  name="fecha_edit" value="{$empresas->anio_creacion}">
+    
     <input type="hidden" name="empresa_id" value={$empresas->id_empresa}>
 {/foreach}
   

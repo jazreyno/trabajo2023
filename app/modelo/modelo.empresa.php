@@ -29,15 +29,15 @@
         }
         
         function insertarEmpresa($nombre,$cotizacion,$fecha){
-            $query=$this->db->prepare("INSERT INTO companias (nombre,cotizacion,fecha_creacion) VALUES (?,?,?)");
+            $query=$this->db->prepare("INSERT INTO companias (nombre,cotizacion,anio_creacion) VALUES (?,?,?)");
             $query->execute([$nombre, $cotizacion, $fecha]);
             return $this->db->lastInsertId();
         }
 
         
-        function editarEmpresa($nombre_edit,$cotizacion_edit,$fecha_edit,$id_empresa){
-            $query=$this->db->prepare("UPDATE `companias` SET nombre = ?,cotizacion = ?, fecha_creacion= ? WHERE id_empresa = ?");
-            $query->execute([$nombre_edit,$cotizacion_edit,$fecha_edit,$id_empresa]);
+        function editarEmpresa($nombre_edit,$cotizacion_edit,$fecha,$id_empresa){
+            $query=$this->db->prepare("UPDATE `companias` SET nombre = ?,cotizacion = ?, anio_creacion= ? WHERE id_empresa = ?");
+            $query->execute([$nombre_edit,$cotizacion_edit,$fecha,$id_empresa]);
         }
         }
     

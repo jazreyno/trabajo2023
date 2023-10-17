@@ -9,11 +9,12 @@
       <tr> 
               <td>  {$videojuego->videojuego} </td> 
               <td>  {$videojuego->genero} </td> 
-              <td><a href="vervideojuego/{$videojuego->id_empresa} ">  {$videojuego->nombre} </a></td>  
+              <td><a href="empresas/{$videojuego->id_empresa} ">  {$videojuego->nombre} </a></td>  
               <td><a href='videojuegoid/{$videojuego->id_videojuegos}'class="btn btn-info" id="eliminar" type="sumbit"> ver mas </a></td>     
+              {if isset($smarty.session.USER_ID)}   
               <td><a href='eliminarVideojuego/{$videojuego->id_videojuegos}'class="btn btn-danger"  type="sumbit"> Eliminar </a></td>
               <td><a href='editarVideojuegosform/{$videojuego->id_videojuegos}'class="btn btn-success" type="sumbit"> Editar</a></td>    
-             
+              {/if}
       </tr>
  {/foreach}   
 
