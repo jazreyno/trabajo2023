@@ -17,9 +17,9 @@
           return $empresas;
         }
 
-        function verEmpresaId($id){
+        function verEmpresaId($id_empresa){
             $query=$this->db->prepare("SELECT * FROM companias  WHERE id_empresa = ? ");
-            $query->execute([$id]);
+            $query->execute([$id_empresa]);
             return $query->fetchAll(PDO::FETCH_OBJ);
         }
 
@@ -40,7 +40,5 @@
             $query->execute([$nombre_edit,$cotizacion_edit,$fecha_edit,$id_empresa]);
         }
         }
-
-
     
     ?>

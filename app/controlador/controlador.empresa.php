@@ -74,8 +74,8 @@ class ControladorEmpresa{
         header('Location: '. BASE_URL . "empresas");
     }
 
-    function editarForm($id){
-        $empresa=$this->modeloempresa->verEmpresaId($id);
+    function editarForm($id_empresa){
+        $empresa=$this->modeloempresa->verEmpresaId($id_empresa);
         $this->vistaempresa->editar($empresa);
     }
     

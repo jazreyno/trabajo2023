@@ -30,8 +30,8 @@ class VistaEmpresa{
     function mostrareditEmpresa($empresa){
         $this->smarty->assign ("empresa",$empresa);
         $this->smarty->display("editVideojuegos2.tpl");
-    
     }
+    
      function editar($empresa){
         $this->smarty->assign ("empresa",$empresa);
         $this->smarty->display("editEmpresa.tpl");

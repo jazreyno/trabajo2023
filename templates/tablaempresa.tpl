@@ -12,11 +12,11 @@
       <td><a href="empresas/{$empresas->id_empresa}">  {$empresas->nombre} </a></td> 
       <td>{$empresas->cotizacion} </td> 
       <td>{$empresas->fecha_creacion} </td> 
-      {if isset($smarty.session.USER_ID)}
+     <!--- { if isset($smarty.session.USER_ID) }-->
       <td><a href='eliminarEmpresa/{$empresas->id_empresa}' class="btn btn-danger"> Eliminar </a></td>
       <!--yo-->
       <td><a href='editarEmpresaform/{$empresas->id_empresa}' class="btn btn-success"> Editar </a></td>
-      {/if}
+      <!--- { /if }-->
       </tr>
       {/foreach}
       
