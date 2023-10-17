@@ -22,14 +22,15 @@ class VistaJuegos{
 
     //EDITAR
     function mostrarEditar($videojuegos, $empresas){
-        echo "<br><br><br>";
-            $this->smarty->assign("videojuegos", $videojuegos);
-            $this->smarty->assign("empresas", $empresas);
-
-            $this->smarty->display("editVideojuegos.tpl");
-        
+        $this->smarty->assign("videojuegos", $videojuegos);
+        $this->smarty->assign("empresas", $empresas);
+        $this->smarty->display("editVideojuegos.tpl");    
     }
 
+    function mostrarError($error = null){
+        $this->smarty->assign("error", $error);
+        $this->smarty->display("TablaVideojuegos.tpl");
+    }
 }
 
 ?>

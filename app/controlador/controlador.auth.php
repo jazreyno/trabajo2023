@@ -19,11 +19,9 @@ class controladorUsuarios
             $this->vista->mostrarLogin();
     }
 
-    public function validarUsuario()
-    {
+    public function validarUsuario(){
         $email = $_POST['email'];
         $contraseña = $_POST['password'];
-
 
         $usuario= $this->modelo->traerUsuariosEmail($email);
 
@@ -34,18 +32,16 @@ class controladorUsuarios
             $_SESSION['IS_LOGGED'] = true;
 
             header("Location: " . BASE_URL );
-
         } else {
          $this->vista->mostrarLogin("El usuario o la contraseña no existe.");
         } 
       
          }
-            function logout() 
-            {
+        function logout() {
             session_start();
             session_destroy();
             header("Location: " . BASE_URL );
-            }
+        }
             
    
 }

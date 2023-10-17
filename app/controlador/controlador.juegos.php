@@ -41,7 +41,7 @@
            
             //Validacion
             if (empty($nombre) || empty($genero) || empty($empresa)) {
-                $this->vistajuegos->mostrarError("Completar los campos vacios.");
+              //  $this->vistajuegos->mostrarErrorJuego("Completar los campos vacios.");
                 return;
             }
 
@@ -49,7 +49,7 @@
             if($id) {
                 header('Location: '. BASE_URL . "/videojuegos");
             } else {
-                $this->vistajuegos->mostrarError("Error al insertar juego.");
+             //   $this->vistajuegos->mostrarErrorJuego("Error al insertar juego.");
             }
         }
 
@@ -81,8 +81,8 @@
             $videojuegos = $this->modelojuegos->verJuegosId($id);
             $empresas = $this->modeloEmpresa->verEmpresa();
             $this->vistajuegos->mostrarEditar($videojuegos, $empresas);
-
         }
+
 
         
 

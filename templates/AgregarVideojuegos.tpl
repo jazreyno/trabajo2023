@@ -4,9 +4,9 @@
     <form method="POST" class="row g-3" action="agregar" id="form-videojuego">
         <div class="col-auto">
             <label for="inputPassword2" class="visually-hidden">nombre</label>
-            <input class="form-control" type="text" placeholder="nombre" name="videojuego">
+            <input required class="form-control" type="text" placeholder="nombre" name="videojuego">
             <label for="inputPassword2" class="visually-hidden">genero</label>
-            <input class="form-control" type="text" placeholder="genero" name="genero">
+            <input required class="form-control" type="text" placeholder="genero" name="genero">
 
         </div>
     <div class="col-3">

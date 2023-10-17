@@ -13,88 +13,60 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
 
     $params = explode('/', $action);
 
+    $controladorVideojuegos = new ControladorVideojuegos();
+    $controladorEmpresa = new ControladorEmpresa();
+    $controladorUsuario = new controladorUsuarios();
 
     switch($params[0]) {
         case 'videojuegos':
-            $controladorVideojuegos = new ControladorVideojuegos();
-            $controladorEmpresa = new ControladorEmpresa();
             $controladorEmpresa->MostrarSelect();
             $controladorVideojuegos->VerVideojuegos();
             break;
         case 'videojuegoid':
-            $controlador = new ControladorVideojuegos();
-            $controlador->VerVideojuegoId($params[1]);
+            $controladorVideojuegos->VerVideojuegoId($params[1]);
             break;
         case 'verEmpresaId':
-            $controlador=new ControladorEmpresa();
-            $controlador->JuegosPorEmpresa($params[1]);
+            $controladorEmpresa->JuegosPorEmpresa($params[1]);
             break;
-
         case 'agregar':
-            $controlador = new ControladorVideojuegos();
-            $controlador->agregarJuego();
+            $controladorVideojuegos->agregarJuego();
                 break; 
         case 'eliminarVideojuego':
-            $controlador = new ControladorVideojuegos();
-            $id=$params[1];
-            $controlador->eliminarJuego($id);
+            $controladorVideojuegos->eliminarJuego($params[1]);
             break;
         case 'eliminarEmpresa':
-            $controlador=new ControladorEmpresa();
-            $controlador->eliminarEmpresa($params[1]);
+            $controladorEmpresa->eliminarEmpresa($params[1]);
             break;
         case 'agregarEmpresa':
-            $controlador=new ControladorEmpresa();
-            $controlador->agregarEmpresa();
+            $controladorEmpresa->agregarEmpresa();
             break;
         case 'empresas':
-            $controlador = new ControladorEmpresa();
-            $controlador->verEmpresa();                
+            $controladorEmpresa->verEmpresa();                
             break;
         case 'login':
-            $controlador = new controladorUsuarios();
-            $controlador->vistaLogin();
+            $controladorUsuario->vistaLogin();
             break;
         case 'validar':
-            $controlador = new controladorUsuarios();
-            $controlador->validarUsuario();
+            $controladorUsuario->validarUsuario();
             break;
         case 'logout':
-            $controlador = new ControladorUsuarios();
-            $controlador->logout();
+            $controladorUsuario->logout();
             break;
-                /*
-        case 'editarvideojuegos':
-            $controlador=new ControladorVideojuegos();
-            $controlador->actualizarJuego($params[1]);
-            break;*/
         case 'editarVideojuegosform':
-            $controladorVideojuegos=new ControladorVideojuegos;
-            //$controladorEmpresa=new ControladorEmpresa;
             $controladorVideojuegos->mostrarEditarJuegos($params[1]);
-            //$controladorEmpresa->mostrareditEmpresa($params[1]);
             break;
         case 'actualizarJuego':
-            $controladorVideojuegos=new ControladorVideojuegos;
-
             $controladorVideojuegos->actualizarJuego($params[1]); 
             break;
-
-            
        case 'editarEmpresa':
-            $controlador=new ControladorEmpresa;
-        
-            $controlador->editarEmpresa($params[1]);
+            $controladorEmpresa->editarEmpresa($params[1]);
             break;
         case 'editarEmpresaform':
-            $controlador=new ControladorEmpresa;
-            
-            $controlador->editarForm($params[1]);
+            $controladorEmpresa->editarForm($params[1]);
             break;
-  
         default:
-            echo "404 Page Not Found"; //cambiar 
-            break;
+        header('Location: 404.php');
+        break;
     }
     
 

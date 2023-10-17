@@ -8,10 +8,10 @@ class vistausuarios
 {
     private $smarty;
 
-    function __construct()
-    {
+    function __construct(){
         $this->smarty=new Smarty();
     }
+    
     //el error null ve si estan vacios los campos
     function mostrarLogin($error = null) {
         $this->smarty->assign("error", $error);

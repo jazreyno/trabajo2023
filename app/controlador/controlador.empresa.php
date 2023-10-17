@@ -42,7 +42,7 @@ class ControladorEmpresa{
         if(!empty($nombre) || !empty($cotizacion)|| !empty($fecha)){
             $this->modeloempresa->insertarEmpresa($nombre,$cotizacion,$fecha);
         } else{
-            $this->vistaempresa->isertarerror();
+           $this->vistaempresa->mostrarError("Complete los campos correspondientes.");
         }
 
         header('Location: '. BASE_URL . "empresas");

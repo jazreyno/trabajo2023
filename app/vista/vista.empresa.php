@@ -5,8 +5,7 @@ class VistaEmpresa{
 
     private $smarty;
 
-    function __construct()
-    {
+    function __construct(){
         $this->smarty=new Smarty();
     }
 
@@ -19,15 +18,11 @@ class VistaEmpresa{
         
     }
     
-    function isertarerror(){
-        
-    }
-
     function MostrarSelect($empresa){
         $this->smarty->assign ("empresa",$empresa);
         $this->smarty->display("AgregarVideojuegos.tpl");
-       
     }
+
     function mostrareditEmpresa($empresa){
         $this->smarty->assign ("empresa",$empresa);
         $this->smarty->display("editVideojuegos2.tpl");
@@ -36,8 +31,13 @@ class VistaEmpresa{
      function editar($empresa){
         $this->smarty->assign ("empresa",$empresa);
         $this->smarty->display("editEmpresa.tpl");
-
      }
+
+    function mostrarError($error = null){
+        $this->smarty->assign("error", $error);
+        $this->smarty->display("TablaEmpresa.tpl");
+    }
+
 }
   
 
