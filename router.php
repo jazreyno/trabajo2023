@@ -64,13 +64,15 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
             break;*/
         case 'editarVideojuegosform':
             $controladorVideojuegos=new ControladorVideojuegos;
-            $controladorEmpresa=new ControladorEmpresa;
+            //$controladorEmpresa=new ControladorEmpresa;
             $controladorVideojuegos->mostrarEditarJuegos($params[1]);
-            $controladorEmpresa->mostrareditEmpresa($params[1]);
+            //$controladorEmpresa->mostrareditEmpresa($params[1]);
             break;
         case 'actualizarJuego':
             $controladorVideojuegos=new ControladorVideojuegos;
             $controladorVideojuegos->actualizarJuego(); 
+        
+        
        case 'editarEmpresa':
             $controlador=new ControladorEmpresa;
             $controlador->editarEmpresa($params[1]);

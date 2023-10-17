@@ -11,18 +11,8 @@ class AuthVista{
     //Vista si hay error
     public function mostrarLogin($error = null){
         $this->smarty->assign("error", $error);
-        
-       require 'templates/login.phtml';
-    }
-
-
-
-}
-/* 
-    public function mostrarLogin($error = null) {
-//        require './templates/login.phtml';
-
+        $this->smarty->display("templates/login.tpl");
     }
 
 }
-*/
+

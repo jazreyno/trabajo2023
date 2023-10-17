@@ -41,16 +41,10 @@
               return $videojuegos;
             }
 
-
-            //EDITAR
-            //UPDATE `videojuegos` SET `id_videojuegos`='[value-1]',`videojuego`='[value-2]',`genero`='[value-3]',`id_empresa`='[value-4]' WHERE 1
             
         function actualizarJuego($nombre, $genero, $empresa, $id){
-
             $query=$this->db->prepare("UPDATE `videojuegos` SET videojuego = ? ,`genero` = ? ,`id_empresa`= ?  WHERE id_videojuegos = ?");
             $query->execute([$nombre,$genero,$empresa,$id]);
-
-            
         }
 
         

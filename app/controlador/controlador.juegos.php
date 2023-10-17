@@ -41,7 +41,7 @@
 
             $id = $this->modelojuegos->agregarJuego($nombre,$genero, $empresa);
             if($id) {
-                header('Location: '. BASE_URL . "videojuegos");
+                header('Location: '. BASE_URL . "/videojuegos");
             } else {
                 $this->vistajuegos->mostrarError("Error al insertar juego.");
             }
@@ -49,14 +49,12 @@
 
         function eliminarJuego($id){
             $this->modelojuegos->eliminarJuego($id);
-            header('Location: '. BASE_URL . "videojuegos");
+            header('Location: '. BASE_URL . "/videojuegos");
         }
 
         ////////////////////
         //EDITAR VIDEOJUEGOS!
         ////////////////////
-
-        
 
         function actualizarJuego(){
             $nombre = $_POST['videojuego_edit'];
@@ -66,7 +64,7 @@
 
             $this->modelojuegos->actualizarJuego($nombre, $genero, $empresa, $id);   
 
-            header('Location: '. BASE_URL . "videojuegos");
+            header('Location: '. BASE_URL . "/videojuegos");
 
         }
         

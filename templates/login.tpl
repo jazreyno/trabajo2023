@@ -1,14 +1,4 @@
-<?php 
-require 'templates/header.tpl';
-?>
-
-<?php 
-/*
-    $contrasenia = "12345";
-    $contraseniaEncriptada = password_hash($contrasenia, PASSWORD_DEFAULT);
-    echo ("Clave encriptada $contraseniaEncriptada");*/
-
-?>
+{include 'templates/header.tpl'} 
 
 
 <div class="mt-5 w-25 mx-auto">
@@ -22,16 +12,16 @@ require 'templates/header.tpl';
             <input type="password" required class="form-control" id="contrasenia" name="contrasenia">
         </div>
 
-        <?php if ($error) : ?>
+        {if $error} 
             <div class='alert alert-danger' role='alert'>
-                <?= $error ?>
+                {$error}
             </div> 
-        <?php endif ?>
+        {/if} 
        
         <button type="submit" class="btn btn-primary mt-3">Entrar</button>
     </form>
 </div>
 
-<?php require 'templates/footer.tpl';
- ?>
+{include 'templates/footer.tpl'} 
+
 
