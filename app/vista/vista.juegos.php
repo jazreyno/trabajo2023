@@ -24,9 +24,11 @@ class VistaJuegos{
     }
 
     //EDITAR
-    function mostrarEditar($videojuegos){
+    function mostrarEditar($videojuegos, $empresas){
         echo "<br><br><br>";
-            $this->smarty->assign("videojuegos",$videojuegos);
+            $this->smarty->assign("videojuegos", $videojuegos);
+            $this->smarty->assign("empresas", $empresas);
+
             $this->smarty->display("editVideojuegos.tpl");
         
     }

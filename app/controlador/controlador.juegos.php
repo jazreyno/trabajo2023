@@ -2,10 +2,12 @@
     require_once './app/vista/vista.juegos.php';
     require_once './app/modelo/modelo.juegos.php';
     require_once './app/helpers/auth.helper.php';
+    require_once './app/modelo/modelo.empresa.php';
 
 
     class ControladorVideojuegos{
         private $modelojuegos;
+        private $modeloEmpresa;
         private $vistajuegos;
         private $helper;
 
@@ -15,6 +17,7 @@
             $this->modelojuegos=new ModeloJuegos();
             $this->vistajuegos=new VistaJuegos();
             $this->helper=new AuthHelper();
+            $this->modeloEmpresa = new ModeloEmpresa();
         }
 
         function VerVideojuegos(){
@@ -71,8 +74,10 @@
 
         function mostrarEditarJuegos($id){
             //  $this->helper->checkLoggedIn();
-            $videojuegos=$this->modelojuegos->verJuegosId($id);
-            $this->vistajuegos->mostrarEditar($videojuegos);
+            $videojuegos = $this->modelojuegos->verJuegosId($id);
+            $empresas = $this->modeloEmpresa->verEmpresa();
+            $this->vistajuegos->mostrarEditar($videojuegos, $empresas);
+
         }
 
         
