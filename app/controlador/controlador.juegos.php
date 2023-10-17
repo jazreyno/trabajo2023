@@ -12,8 +12,6 @@
         private $helper;
 
         function __construct(){
-            //agregar login
-            //AuthHelper::verify();
             $this->modelojuegos=new ModeloJuegos();
             $this->vistajuegos=new VistaJuegos();
             $this->helper=new AuthHelper();
@@ -41,7 +39,7 @@
            
             //Validacion
             if (empty($nombre) || empty($genero) || empty($empresa)) {
-              //  $this->vistajuegos->mostrarErrorJuego("Completar los campos vacios.");
+                $this->vistajuegos->mostrarError("Completar los campos vacios.");
                 return;
             }
 
@@ -49,7 +47,7 @@
             if($id) {
                 header('Location: '. BASE_URL . "/videojuegos");
             } else {
-             //   $this->vistajuegos->mostrarErrorJuego("Error al insertar juego.");
+                $this->vistajuegos->mostrarError("Error al insertar juego.");
             }
         }
 

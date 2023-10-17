@@ -8,7 +8,7 @@
     <tr>
         <td>  {$videojuego->videojuego} </td> 
         <td>  {$videojuego->genero} </td> 
-        <td><a href="empresa/{$videojuego->id_empresa} ">  {$videojuego->nombre} </a></td>
+        <td><a href="empresas/{$videojuego->id_empresa} ">  {$videojuego->nombre} </a></td>
             {if isset($smarty.session.USER_ID)}
             <td><a href='editarVideojuegosform/{$videojuego->id_empresa}'class="btn btn-success"  type="sumbit"> Editar</a></td>
             {/if}
