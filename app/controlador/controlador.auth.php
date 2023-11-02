@@ -5,8 +5,7 @@ require_once './app/vista/vista.auth.php';
 require_once './app/helpers/auth.helper.php';
 
 
-class controladorUsuarios
-{
+class controladorUsuarios{
     private $vista;
     private $modelo;
 
@@ -25,7 +24,7 @@ class controladorUsuarios
 
         $usuario= $this->modelo->traerUsuariosEmail($email);
 
-        if($usuario && password_verify ($contraseña, $usuario->contraseña)){
+        if($usuario && password_verify($contraseña, $usuario->contraseña)){
             session_start();
             $_SESSION['USER_ID'] = $usuario->id;
             $_SESSION['USER_EMAIL'] = $usuario->email;

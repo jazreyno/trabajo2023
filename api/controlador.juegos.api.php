@@ -10,7 +10,10 @@
             $this->modelo = new ModeloJuegos();
             $this->vista = new VistaApi();
         }
-        
 
-
+        function get($params = []) {
+            $tareas = $this->modelo->verJuegos();
+            return $this->vista->response($tareas, 200);
+      }
+      
     }
