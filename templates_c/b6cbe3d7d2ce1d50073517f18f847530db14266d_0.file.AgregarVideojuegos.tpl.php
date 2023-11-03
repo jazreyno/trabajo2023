@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-14 21:36:42
+/* Smarty version 4.2.1, created on 2023-10-17 02:32:44
   from 'C:\xampp3\htdocs\trabajo2023\templates\AgregarVideojuegos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652aedca549760_30762825',
+  'unifunc' => 'content_652dd62c825f28_55789606',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6cbe3d7d2ce1d50073517f18f847530db14266d' => 
     array (
       0 => 'C:\\xampp3\\htdocs\\trabajo2023\\templates\\AgregarVideojuegos.tpl',
-      1 => 1697312197,
+      1 => 1697502751,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652aedca549760_30762825 (Smarty_Internal_Template $_smarty_tpl) {
-?>
+function content_652dd62c825f28_55789606 (Smarty_Internal_Template $_smarty_tpl) {
+if ((isset($_SESSION['USER_ID']))) {?>
 <form method="POST" class="row g-3" action="agregar" id="form-videojuego">
     <div class="col-auto">
         <label for="inputPassword2" class="visually-hidden">nombre</label>
@@ -52,5 +52,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
 </div>
 </form>
-<?php }
+        <?php }
+}
 }

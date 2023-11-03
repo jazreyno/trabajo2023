@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-16 03:26:47
+/* Smarty version 4.2.1, created on 2023-10-17 02:56:02
   from 'C:\xampp3\htdocs\trabajo2023\templates\TablaVideojuegos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652c915783d483_58057370',
+  'unifunc' => 'content_652ddba27e0376_96701461',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6620c403b5ada7ee973952362e991c8d4b38b6df' => 
     array (
       0 => 'C:\\xampp3\\htdocs\\trabajo2023\\templates\\TablaVideojuegos.tpl',
-      1 => 1697407587,
+      1 => 1697504160,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652c915783d483_58057370 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652ddba27e0376_96701461 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h1>Videojuegos</h1>
@@ -46,12 +46,13 @@ $_smarty_tpl->tpl_vars['videojuego']->do_else = false;
  ">  <?php echo $_smarty_tpl->tpl_vars['videojuego']->value->nombre;?>
  </a></td>  
               <td><a href='videojuegoid/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_videojuegos;?>
-'class="btn btn-info" id="eliminar" type="sumbit"> ver mas </a></td>     
-              <td><a href='eliminarvideojuego/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_videojuegos;?>
+'class="btn btn-info" id="eliminar" type="sumbit"> ver mas </a></td>  
+       
+              <td><a href='eliminarVideojuego/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_videojuegos;?>
 'class="btn btn-danger"  type="sumbit"> Eliminar </a></td>
               <td><a href='editarVideojuegosform/<?php echo $_smarty_tpl->tpl_vars['videojuego']->value->id_videojuegos;?>
 'class="btn btn-success" type="sumbit"> Editar</a></td>    
-             
+        
       </tr>
  <?php
 }

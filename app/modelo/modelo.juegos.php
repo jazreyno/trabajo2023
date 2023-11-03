@@ -50,7 +50,6 @@
             $query=$this->db->prepare("UPDATE `videojuegos` SET videojuego = ? ,`genero` = ? ,`id_empresa`= ?  WHERE id_videojuegos = ?");
             $query->execute([$nombre,$genero,$empresa,$id]);
 
-            
         }
 
         
